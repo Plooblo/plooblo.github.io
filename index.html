@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JT Drones | Aerial Photography & Roof Inspection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .modal {
+      display: none;
+    }
+    .modal.open {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50">
+    <div class="bg-white p-8 rounded-xl max-w-md w-full mx-auto relative">
+      <button onclick="toggleContactModal()" class="absolute top-4 right-4 text-xl">&times;</button>
+      <h2 class="text-2xl font-bold mb-4 text-center">Book a Call</h2>
+      <form class="space-y-4" enctype="multipart/form-data">
+        <div>
+          <label for="name" class="block font-semibold">Name<span class="text-red-500">*</span></label>
+          <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+        </div>
+        <div>
+          <label for="email" class="block font-semibold">Email<span class="text-red-500">*</span></label>
+          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+        </div>
+        <div>
+          <label for="phone" class="block font-semibold">Phone Number<span class="text-red-500">*</span></label>
+          <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+        </div>
+        <div>
+          <label for="description" class="block font-semibold">Description of the Job<span class="text-red-500">*</span></label>
+          <textarea id="description" name="description" required class="w-full border border-gray-300 rounded-lg px-4 py-2"></textarea>
+        </div>
+        <div>
+          <label for="file" class="block font-semibold">Upload an Example Image (JPEG/PNG)</label>
+          <input type="file" id="file" name="file" accept="image/png, image/jpeg" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="bg-white shadow-sm z-10 relative">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <img src="images/logo-transparent2.png" alt="JT Drones Logo" class="h-20 w-auto">
+      <button onclick="toggleContactModal()" class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Book a Call</button>
+    </div>
+  </header>
+
+  <section class="relative h-screen text-white flex items-center justify-center overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="banner.mp4" type="video/mp4">
+      <source src="banner.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- Dark Overlay and Content -->
+    <div class="relative z-10 px-4">
+      <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-xl p-8 text-center max-w-3xl mx-auto">
+        <h1 class="text-5xl font-bold mb-4 text-white">Capture the World From Above</h1>
+        <p class="text-lg mb-8 text-gray-200">JT Drones offers high-quality aerial photography, roof inspections, and landscaping visuals that elevate your perspective.</p>
+        <button onclick="toggleContactModal()" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-700 transition">Book a Call</button>
+      </div>
+    </div>
+  </section>
+  
+
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-12 text-center">
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2 text-blue-700">Aerial Photography</h3>
+        <p class="text-gray-600">Stunning drone photography to showcase landscapes, properties, and events from new heights.</p>
+      </div>
+      <div class="bg-green-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2 text-green-700">Roof Inspections</h3>
+        <p class="text-gray-600">Accurate, safe, and detailed drone roof inspections for property managers and real estate professionals.</p>
+      </div>
+      <div class="bg-yellow-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2 text-yellow-700">Business Visuals</h3>
+        <p class="text-gray-600">Highlight your business location or services with premium aerial shots tailored to your brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (scrolling horizontal) -->
+  <section class="bg-gray-100 py-16 overflow-x-auto whitespace-nowrap">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <div class="flex gap-6 transition-all ease-in-out duration-300">
+        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
+          <img src="https://www.thispersondoesnotexist.com/" alt="Sarah M" class="mx-auto rounded-full mb-4">
+          <p class="italic break-words">“JT Drones transformed our property listing. The drone shots made all the difference.”</p>
+          <span class="block mt-4 font-semibold">— Sarah M, Estate Agent</span>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
+          <img src="https://www.thispersondoesnotexist.com/" alt="Mike R" class="mx-auto rounded-full mb-4">
+          <p class="italic break-words">“Fast, professional, and the aerial images were incredible. Highly recommend.”</p>
+          <span class="block mt-4 font-semibold">— Mike R., Contractor</span>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
+          <img src="https://picsum.photos/200" alt="Lisa T" class="mx-auto rounded-full mb-4">
+          <p class="italic break-words">“Incredible service and gorgeous photos — will definitely hire again.”</p>
+          <span class="block mt-4 font-semibold">— Lisa T., Landscaper</span>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
+          <img src="https://picsum.photos/200" alt="Derek S" class="mx-auto rounded-full mb-4">
+          <p class="italic break-words">“The drone inspection saved us hours of manual labor. Great tech!”</p>
+          <span class="block mt-4 font-semibold">— Derek S., Facility Manager</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel (with lightbox effect) -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Gallery</h2>
+      <div class="overflow-x-auto whitespace-nowrap">
+        <img onclick="openModal(this.src)" src="https://placehold.co/300x200" class="cursor-pointer inline-block mx-2 rounded-lg shadow-md" alt="Aerial Image 1">
+        <img onclick="openModal(this.src)" src="https://placehold.co/300x200" class="cursor-pointer inline-block mx-2 rounded-lg shadow-md" alt="Aerial Image 2">
+        <img onclick="openModal(this.src)" src="https://placehold.co/300x200" class="cursor-pointer inline-block mx-2 rounded-lg shadow-md" alt="Aerial Image 3">
+        <img onclick="openModal(this.src)" src="https://placehold.co/300x200" class="cursor-pointer inline-block mx-2 rounded-lg shadow-md" alt="Aerial Image 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for gallery image -->
+  <div id="modal" class="modal fixed inset-0 bg-black bg-opacity-75 items-center justify-center z-50">
+    <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <img id="modal-img" class="max-h-[80vh] max-w-[90vw] mx-auto rounded-lg shadow-2xl">
+  </div>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="bg-blue-600 py-20 text-white text-center">
+    <h2 class="text-4xl font-bold mb-4">Ready to Elevate Your View?</h2>
+    <p class="text-lg mb-8">Let's chat about your project. Book a free call today.</p>
+    <button onclick="toggleContactModal()" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Book a Call</button>
+  </section>
+
+  <footer class="bg-gray-800 text-gray-300 text-center py-6">
+    <p>&copy; 2025 JT Drones. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal Script -->
+  <script>
+    function toggleContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>
