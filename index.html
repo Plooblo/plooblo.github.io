@@ -35,7 +35,7 @@
     <div class="bg-white p-8 rounded-xl max-w-md w-full mx-auto relative">
       <button onclick="toggleContactModal()" class="absolute top-4 right-4 text-xl">&times;</button>
       <h2 class="text-2xl font-bold mb-4 text-center">Book a Call</h2>
-      <form class="space-y-4" enctype="multipart/form-data">
+      <form action="https://formsubmit.co/admin@jt-drones.co.uk" method="POST" class="space-y-4" enctype="multipart/form-data">
         <div>
           <label for="name" class="block font-semibold">Name<span class="text-red-500">*</span></label>
           <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
@@ -107,28 +107,29 @@
     </div>
   </section>
 
-  <!-- Testimonials (scrolling horizontal) -->
+
+  <!-- Testimonials (scrolling horizontal) https://www.thispersondoesnotexist.com/ -->
   <section class="bg-gray-100 py-16 overflow-x-auto whitespace-nowrap">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
       <div class="flex gap-6 transition-all ease-in-out duration-300">
         <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="https://www.thispersondoesnotexist.com/" alt="Sarah M" class="mx-auto rounded-full mb-4">
+          <img src="./images/testimonials/test2.jpg" alt="Sarah M" class="mx-auto rounded-full mb-4">
           <p class="italic break-words">“JT Drones transformed our property listing. The drone shots made all the difference.”</p>
           <span class="block mt-4 font-semibold">— Sarah M, Estate Agent</span>
         </div>
         <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="https://www.thispersondoesnotexist.com/" alt="Mike R" class="mx-auto rounded-full mb-4">
+          <img src="./images/testimonials/test3.jpg" alt="Mike R" class="mx-auto rounded-full mb-4">
           <p class="italic break-words">“Fast, professional, and the aerial images were incredible. Highly recommend.”</p>
           <span class="block mt-4 font-semibold">— Mike R., Contractor</span>
         </div>
         <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="https://picsum.photos/200" alt="Lisa T" class="mx-auto rounded-full mb-4">
+          <img src="./images/testimonials/test4.jpg" alt="Lisa T" class="mx-auto rounded-full mb-4">
           <p class="italic break-words">“Incredible service and gorgeous photos — will definitely hire again.”</p>
           <span class="block mt-4 font-semibold">— Lisa T., Landscaper</span>
         </div>
         <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="https://picsum.photos/200" alt="Derek S" class="mx-auto rounded-full mb-4">
+          <img src="./images/testimonials/test1.jpg" alt="Derek S" class="mx-auto rounded-full mb-4">
           <p class="italic break-words">“The drone inspection saved us hours of manual labor. Great tech!”</p>
           <span class="block mt-4 font-semibold">— Derek S., Facility Manager</span>
         </div>
@@ -154,6 +155,34 @@
     <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</span>
     <img id="modal-img" class="max-h-[80vh] max-w-[90vw] mx-auto rounded-lg shadow-2xl">
   </div>
+  
+  <script>
+  // Open the modal and show the clicked image
+  function openModal(src) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modalImg.src = src;
+    modal.classList.add("flex");
+    modal.classList.remove("hidden");
+  }
+
+  // Close the modal when clicking outside the image or on the close button
+  function closeModal() {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modal.classList.remove("flex");
+    modal.classList.add("hidden");
+    modalImg.src = "";
+  }
+
+  // Optional: Close modal on background click (not just the X)
+  document.getElementById("modal").addEventListener("click", function(e) {
+    if (e.target.id === "modal") {
+      closeModal();
+    }
+  });
+</script>
+
 
   <!-- Contact CTA -->
   <section id="contact" class="bg-blue-600 py-20 text-white text-center">
@@ -163,8 +192,11 @@
   </section>
 
   <footer class="bg-gray-800 text-gray-300 text-center py-6">
-    <p>&copy; 2025 JT Drones. All rights reserved.</p>
-  </footer>
+	  <p class="mb-2">&copy; 2025 JT Drones. All rights reserved.</p>
+	  <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition">
+		View our Privacy Policy
+	  </a>
+</footer>
 
   <!-- Modal Script -->
   <script>
