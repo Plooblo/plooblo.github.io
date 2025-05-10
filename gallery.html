@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG5N6LJYTV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VG5N6LJYTV');
+  </script>
+  <!-- Google tag (gtag.js) -->
+
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | JT Drones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .modal {
+      display: none;
+    }
+    .modal.open {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+  <!-- Contact Form Modal -->
+<div id="contactModal" class="modal hidden fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-xl max-w-md w-full mx-auto relative">
+    <button onclick="toggleContactModal()" class="absolute top-4 right-4 text-xl">&times;</button>
+    <h2 class="text-2xl font-bold mb-4 text-center">Book a Call</h2>
+    <form action="https://formsubmit.co/admin@jt-drones.co.uk" method="POST" class="space-y-4" enctype="multipart/form-data">
+      <div>
+        <label for="name" class="block font-semibold">Name<span class="text-red-500">*</span></label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <div>
+        <label for="email" class="block font-semibold">Email<span class="text-red-500">*</span></label>
+        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <div>
+        <label for="phone" class="block font-semibold">Phone Number<span class="text-red-500">*</span></label>
+        <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <div>
+        <label for="description" class="block font-semibold">Description of the Job<span class="text-red-500">*</span></label>
+        <textarea id="description" name="description" required class="w-full border border-gray-300 rounded-lg px-4 py-2"></textarea>
+      </div>
+      <div>
+        <label for="file" class="block font-semibold">Upload an Example Image (JPEG/PNG)</label>
+        <input type="file" id="file" name="file" accept="image/png, image/jpeg" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-md fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html"><img src="./images/brand.png" alt="JT Drones Logo" class="h-12"></a>
+    <div class="md:hidden">
+      <button onclick="toggleMenu()" class="text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <ul id="navLinks" class="hidden md:flex gap-6 items-center text-gray-800 font-medium">
+      <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="./index.html#features" class="hover:text-blue-600">Features</a></li>
+      <li><a href="./index.html#testimonials" class="hover:text-blue-600">Testimonials</a></li>
+      <li><a href="./gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a></li>
+      <li><a href="./index.html#contact" class="hover:text-blue-600">Contact</a></li>
+      <li>
+        <button onclick="toggleContactModal()" class="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+          Book a Call
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pb-4">
+    <ul class="space-y-2">
+      <li><a href="./index.html" class="block py-2 hover:text-blue-600">Home</a></li>
+      <li><a href="./index.html#features" class="block py-2 hover:text-blue-600">Features</a></li>
+      <li><a href="./index.html#testimonials" class="block py-2 hover:text-blue-600">Testimonials</a></li>
+      <li><a href="./gallery.html" class="block py-2 hover:text-blue-600 font-semibold">Gallery</a></li>
+      <li><a href="./index.html#contact" class="block py-2 hover:text-blue-600">Contact</a></li>
+      <li>
+        <button onclick="toggleContactModal()" class="w-full mt-2 bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
+          Book a Call
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Spacer -->
+<div class="h-20"></div>
+<!-- Gallery Modal -->
+<div id="modal" class="modal hidden fixed inset-0 bg-black bg-opacity-70 items-center justify-center z-50">
+  <!-- Close Button (Fixed Position) -->
+  <button onclick="closeModal()" class="fixed top-6 right-6 text-white text-4xl font-bold z-50">&times;</button>
+
+  <!-- Image Container -->
+  <div class="max-w-[80vw] max-h-[80vh] mx-auto flex items-center justify-center">
+    <img id="modal-img" src="" class="rounded-lg object-contain max-w-full max-h-full shadow-2xl transition duration-300 ease-in-out filter brightness-105 contrast-110 saturate-125" />
+  </div>
+</div>
+
+<!-- Gallery Section -->
+<main class="max-w-7xl mx-auto px-4 py-16">
+  <h1 class="text-4xl font-bold text-center mb-10">Gallery</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <img src="./images/DJI_0036.JPG" alt="Gallery Image 1" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="./images/DJI_0040.JPG" alt="Gallery Image 2" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="./images/DJI_0042.JPG" alt="Gallery Image 3" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="https://placehold.co/600x400" alt="Gallery Image 4" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="https://placehold.co/600x400" alt="Gallery Image 5" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="https://placehold.co/600x400" alt="Gallery Image 6" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="https://placehold.co/600x400" alt="Gallery Image 4" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="https://placehold.co/600x400" alt="Gallery Image 5" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+    <img src="https://placehold.co/600x400" alt="Gallery Image 6" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
+  </div>
+  <!-- 360 Photo Embed -->
+<div class="w-full flex justify-center mt-20">
+  <div class="w-full md:w-3/4 xl:w-2/3">
+    <iframe
+      width="100%"
+      height="640"
+      frameborder="0"
+      allow="xr-spatial-tracking; gyroscope; accelerometer"
+      allowfullscreen
+      scrolling="no"
+      src="https://kuula.co/share/collection/71Pnw?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1"
+      class="rounded-xl shadow-lg"
+    ></iframe>
+  </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300 py-6 relative">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-4 md:mb-0 text-center md:text-left">
+      <p class="mb-1">&copy; 2025 JT Drones. All rights reserved.</p>
+      <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition">View our Privacy Policy</a>
+    </div>
+
+    <!-- Socials Bottom-Left on Desktop -->
+    <div class="absolute bottom-4 left-4 md:static flex gap-4 text-xl text-white">
+      <a href="https://www.instagram.com/jtdrones" target="_blank" aria-label="Instagram" class="hover:text-pink-400 transition">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61576260053191" target="_blank" aria-label="Facebook" class="hover:text-blue-500 transition">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+  }
+
+  function openModal(src) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modalImg.src = src;
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("flex");
+    modal.classList.add("hidden");
+  }
+
+  function toggleContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.toggle('hidden');
+    modal.classList.toggle('open');
+  }
+
+  function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("hidden");
+}
+</script>
+</body>
+</html>
