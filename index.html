@@ -20,6 +20,9 @@
   <title>JT Drones | Aerial Photography & Roof Inspection</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <style>
     .modal {
       display: none;
@@ -33,7 +36,9 @@
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
   <!-- Navigation Bar -->
-<nav class="bg-white shadow-md fixed w-full top-0 z-50">
+<nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent backdrop-blur-sm">
+
+
   <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
     <a href="#hero"><img src="./images/brand.png" alt="JT Drones Logo" class="h-12"></a>
     <div class="md:hidden">
@@ -43,10 +48,10 @@
     </div>
     <ul id="navLinks" class="hidden md:flex gap-6 items-center text-gray-800 font-medium">
       <li><a href="#hero" class="hover:text-blue-600">Home</a></li>
-      <li><a href="#features" class="hover:text-blue-600">Features</a></li>
+      <li><a href="#services" class="hover:text-blue-600">Services</a></li>
       <li><a href="#testimonials" class="hover:text-blue-600">Testimonials</a></li>
       <li><a href="./gallery.html" class="hover:text-blue-600">Gallery</a></li>
-      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      <li><a href="./contactus.html" class="hover:text-blue-600">Contact</a></li>
       <li>
         <button onclick="toggleContactModal()" class="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
           Book a Call
@@ -58,10 +63,10 @@
   <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pb-4">
     <ul class="space-y-2">
       <li><a href="#hero" class="block py-2 hover:text-blue-600">Home</a></li>
-      <li><a href="#features" class="block py-2 hover:text-blue-600">Features</a></li>
+      <li><a href="#services" class="block py-2 hover:text-blue-600">Services</a></li>
       <li><a href="#testimonials" class="block py-2 hover:text-blue-600">Testimonials</a></li>
       <li><a href="./gallery.html" class="block py-2 hover:text-blue-600">Gallery</a></li>
-      <li><a href="#contact" class="block py-2 hover:text-blue-600">Contact</a></li>
+      <li><a href="./contactus.html" class="block py-2 hover:text-blue-600">Contact</a></li>
       <li>
         <button onclick="toggleContactModal()" class="w-full mt-2 bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
           Book a Call
@@ -105,7 +110,7 @@
 
   
 
-  <section id="hero" class="relative h-screen text-white flex items-center justify-center overflow-hidden">
+  <section id="hero" class="relative h-screen text-white flex items-center justify-center overflow-hidden" >
     <!-- Background Video -->
     <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
       <source src="./videos/banner.mp4" type="video/mp4">
@@ -125,27 +130,53 @@
 
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-12 text-center">
-      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold mb-2 text-blue-700">Aerial Photography</h3>
-        <p class="text-gray-600">Stunning drone photography to showcase landscapes, properties, and events from new heights.</p>
+ <!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold text-gray-800">Our Services</h2>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center " data-aos="fade-up" data-aos-delay="0">
+      <div class="text-blue-600 text-4xl mb-4">
+        <i class="fas fa-camera-retro"></i>
       </div>
-      <div class="bg-green-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold mb-2 text-green-700">Roof Inspections</h3>
-        <p class="text-gray-600">Accurate, safe, and detailed drone roof inspections for property managers and real estate professionals.</p>
-      </div>
-      <div class="bg-yellow-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold mb-2 text-yellow-700">Business Visuals</h3>
-        <p class="text-gray-600">Highlight your business location or services with premium aerial shots tailored to your brand.</p>
-      </div>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">Aerial Photography</h3>
+      <p class="text-gray-600">Stunning drone photography to showcase landscapes, properties, and events from above.</p>
     </div>
-  </section>
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="fade-up" data-aos-delay="200">
+      <div class="text-green-600 text-4xl mb-4">
+        <i class="fas fa-tools"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">Roof Inspections</h3>
+      <p class="text-gray-600">Safe, detailed, and efficient drone inspections for roofs and high structures.</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="fade-up" data-aos-delay="400">
+      <div class="text-yellow-600 text-4xl mb-4">
+        <i class="fas fa-building"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">Business Visuals</h3>
+      <p class="text-gray-600">High-quality visuals tailored to promote your brand and commercial locations.</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="fade-up" data-aos-delay="600">
+      <div class="text-purple-600 text-4xl mb-4">
+        <i class="fas fa-map-marked-alt"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2 text-gray-800">Land Surveys</h3>
+      <p class="text-gray-600">Detailed aerial data collection and mapping for planning, construction, or agriculture.</p>
+    </div>
+  </div>
+  <div class="text-center mt-12">
+    <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition">
+      View All Services
+    </a>
+  </div>
+</section>
+
+
 
 
   <!-- Testimonials (scrolling horizontal) https://www.thispersondoesnotexist.com/ -->
-  <section id="testimonials" class="bg-gray-100 py-16 overflow-x-auto whitespace-nowrap">
+  <section id="testimonials" class="bg-gray-100 py-16 overflow-x-auto whitespace-nowrap" data-aos="fade-right">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
       <div class="flex gap-6 transition-all ease-in-out duration-300">
@@ -155,9 +186,9 @@
           <span class="block mt-4 font-semibold">— Sarah M, Estate Agent</span>
         </div>
         <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="./images/testimonials/test3.jpg" alt="Mike R" class="mx-auto rounded-full mb-4">
+          <a href="https://hallingardenprojects.com"><img src="./images/testimonials/HallinGardenProjects.jpg" alt="Hallin Garden Projects" class="mx-auto rounded-full mb-4"></a>
           <p class="italic break-words">“Fast, professional, and the aerial images were incredible. Highly recommend.”</p>
-          <span class="block mt-4 font-semibold">— Mike R., Contractor</span>
+          <span class="block mt-4 font-semibold">— Brandon H., Landscaper</span>
         </div>
         <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
           <img src="./images/testimonials/test4.jpg" alt="Lisa T" class="mx-auto rounded-full mb-4">
@@ -175,25 +206,25 @@
 
   <!-- Carousel (with lightbox effect) -->
   <section id="gallery" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-7xl mx-auto px-4" data-aos="fade-left">
       <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
   
       <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-        <img src="./images/DJI_0036.JPG" onclick="openModal(this.src)" alt="Gallery Image 1"
+        <img src="./images/gallery/DJI_0036.JPG" onclick="openModal(this.src)" alt="Gallery Image 1"
           class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="./images/DJI_0040.JPG" onclick="openModal(this.src)" alt="Gallery Image 2"
+        <img src="./images/gallery/DJI_0040.JPG" onclick="openModal(this.src)" alt="Gallery Image 2"
           class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="./images/DJI_0042.JPG" onclick="openModal(this.src)" alt="Gallery Image 3"
+        <img src="./images/gallery/DJI_0042.JPG" onclick="openModal(this.src)" alt="Gallery Image 3"
           class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="https://placehold.co/600x400" onclick="openModal(this.src)" alt="Gallery Image 4"
+        <img src="./images/gallery/DJI_0057.JPG" onclick="openModal(this.src)" alt="Gallery Image 4"
           class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="https://placehold.co/600x400" onclick="openModal(this.src)" alt="Gallery Image 5"
+        <img src="./images/gallery/DJI_0063.JPG" onclick="openModal(this.src)" alt="Gallery Image 5"
           class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="https://placehold.co/800x400" onclick="openModal(this.src)" alt="Gallery Image 6"
+        <img src="./images/gallery/DJI_0071.JPG" onclick="openModal(this.src)" alt="Gallery Image 6"
           class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
       </div>
     </div>
-    <div class="text-center mt-10">
+    <div class="text-center mt-10" data-aos="fade-up">
       <a href="./gallery.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition">
         View More
       </a>
@@ -263,8 +294,11 @@
   </div>
 </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <!-- Modal Script -->
   <script>
+    AOS.init({ duration: 800, delay:150, once: false });
+
     function toggleContactModal() {
       const modal = document.getElementById('contactModal');
       modal.classList.toggle('hidden');
@@ -291,7 +325,25 @@
       }
     });
   });
-  </script>
 
+  const navbar = document.getElementById("navbar");
+
+  function handleNavbarScroll() {
+    if (window.scrollY > 50) {
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("bg-white", "shadow-md");
+    } else {
+      navbar.classList.remove("bg-white", "shadow-md");
+      navbar.classList.add("bg-transparent");
+    }
+  }
+
+  window.addEventListener("scroll", handleNavbarScroll);
+  document.addEventListener("DOMContentLoaded", handleNavbarScroll);
+
+  
+    
+  </script>
+  
 </body>
 </html>

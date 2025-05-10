@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG5N6LJYTV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VG5N6LJYTV');
+  </script>
+  <!-- Google tag (gtag.js) -->
+
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | JT Drones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+<!-- Background Video -->
+    <video autoplay muted loop playsinline
+      class="absolute top-10 left-0 w-full h-full object-cover -z-10">
+      <source src="./videos/banner.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-md fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html"><img src="./images/brand.png" alt="JT Drones Logo" class="h-12"></a>
+    <div class="md:hidden">
+      <button onclick="toggleMenu()" class="text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <ul id="navLinks" class="hidden md:flex gap-6 items-center text-gray-800 font-medium">
+      <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="./index.html#services" class="hover:text-blue-600">Services</a></li>
+      <li><a href="./index.html#testimonials" class="hover:text-blue-600">Testimonials</a></li>
+      <li><a href="./gallery.html" class="hover:text-blue-600">Gallery</a></li>
+      <li><a href="./contactus.html" class="hover:text-blue-600">Contact</a></li>
+      <li>
+        <button onclick="toggleContactModal()" class="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+          Book a Call
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pb-4">
+    <ul class="space-y-2">
+      <li><a href="./index.html" class="block py-2 hover:text-blue-600">Home</a></li>
+      <li><a href="./index.html#services" class="block py-2 hover:text-blue-600">Services</a></li>
+      <li><a href="./index.html#testimonials" class="block py-2 hover:text-blue-600">Testimonials</a></li>
+      <li><a href="./gallery.html" class="block py-2 hover:text-blue-600">Gallery</a></li>
+      <li><a href="./contactus.html" class="block py-2 hover:text-blue-600">Contact</a></li>
+      <li>
+        <button onclick="toggleContactModal()" class="w-full mt-2 bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
+          Book a Call
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Spacer -->
+<div class="h-24"></div>
+
+<!-- Contact Form Section -->
+<main class="px-4 py-16 max-w-4xl mx-auto">
+  <h1 class="text-4xl font-bold text-center mb-10 text-white">Get in Touch</h1>
+  <form action="https://formsubmit.co/admin@jt-drones.co.uk" method="POST" enctype="multipart/form-data" class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6 border border-gray-700">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label for="name" class="block font-semibold mb-2">Name<span class="text-red-500">*</span></label>
+        <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="email" class="block font-semibold mb-2">Email<span class="text-red-500">*</span></label>
+        <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+    </div>
+    <div>
+      <label for="phone" class="block font-semibold mb-2">Phone Number<span class="text-red-500">*</span></label>
+      <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+    <div>
+      <label for="description" class="block font-semibold mb-2">Message<span class="text-red-500">*</span></label>
+      <textarea name="description" id="description" rows="5" required class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+    </div>
+    <div>
+      <label for="file" class="block font-semibold mb-2">Upload an Example Image (Optional)</label>
+      <input type="file" name="file" id="file" accept="image/png, image/jpeg" class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white" />
+    </div>
+    <button type="submit" class="w-full bg-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-700 transition text-white">Send Message</button>
+  </form>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300 py-6 relative">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-4 md:mb-0 text-center md:text-left">
+      <p class="mb-1">&copy; 2025 JT Drones. All rights reserved.</p>
+      <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition">View our Privacy Policy</a>
+    </div>
+    <div class="absolute bottom-4 left-4 md:static flex gap-4 text-xl text-white">
+      <a href="https://www.instagram.com/jtdrones" target="_blank" aria-label="Instagram" class="hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61576260053191" target="_blank" aria-label="Facebook" class="hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  function toggleContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.toggle('hidden');
+    modal.classList.toggle('open');
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+
+</body>
+</html>
