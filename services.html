@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG5N6LJYTV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VG5N6LJYTV');
+  </script>
+  <!-- Google tag (gtag.js) -->
+  
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="JT Drones provides aerial photography, drone roof inspections, land surveys, and visuals to elevate your project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>JT Drones | Our Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "JT Drones",
+    "url": "https://jt-drones.co.uk",
+    "description": "Aerial drone photography, roof inspections, and land surveys across the UK.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "UK"
+    },
+    "sameAs": [
+      "https://www.instagram.com/jtdrones",
+      "https://www.facebook.com/profile.php?id=61576260053191"
+    ]
+  }
+  </script>
+
+  <style>
+    .modal {
+      display: none;
+    }
+    .modal.open {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="./index.html"><img src="./images/brand.png" alt="JT Drones Logo" class="h-12"></a>
+      <ul class="hidden md:flex gap-6 items-center text-gray-800 font-medium">
+        <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="./services.html" class="hover:text-blue-600 font-semibold">Services</a></li>
+        <li><a href="./index.html#testimonials" class="hover:text-blue-600">Testimonials</a></li>
+        <li><a href="./gallery.html" class="hover:text-blue-600">Gallery</a></li>
+        <li><a href="./contactus.html" class="hover:text-blue-600">Contact</a></li>
+        <li>
+        <button onclick="toggleContactModal()" class="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+          Book a Call
+        </button>
+      </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pb-4">
+    <ul class="space-y-2">
+      <li><a href="./index.html" class="block py-2 hover:text-blue-600">Home</a></li>
+      <li><a href="./services.html" class="block py-2 hover:text-blue-600">Services</a></li>
+      <li><a href="./index.html#testimonials" class="block py-2 hover:text-blue-600">Testimonials</a></li>
+      <li><a href="./gallery.html" class="block py-2 hover:text-blue-600 font-semibold">Gallery</a></li>
+      <li><a href="./contactus.html" class="block py-2 hover:text-blue-600">Contact</a></li>
+      <li>
+        <button onclick="toggleContactModal()" class="w-full mt-2 bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
+          Book a Call
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Services Header -->
+  <header class="pt-40 pb-20 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
+    <h1 class="text-5xl font-bold mb-4">Our Services</h1>
+    <p class="text-lg">Explore how JT Drones can elevate your projects with cutting-edge aerial solutions.</p>
+  </header>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+    <!-- Card 1 -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-video"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800">2-Minute Drone Promos</h3>
+          <p class="text-gray-600 text-center text-xs">Tailored short-form aerial videos perfect for websites, social media, and event marketing.</p>
+        </div>
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/promo-placeholder.jpg" alt="Promo Example" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700">Quick and engaging aerial promos</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-green-600 text-4xl mb-4"><i class="fas fa-vr-cardboard"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800">Google Maps 360° Tours</h3>
+          <p class="text-gray-600 text-center text-xs">Immersive aerial 360° photo packages for businesses looking to stand out on Google Maps and Street View.</p>
+        </div>
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/360-placeholder.jpg" alt="360 Tour" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700">Interactive 360° business views</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-yellow-600 text-4xl mb-4"><i class="fas fa-bullhorn"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800">Business Promo Videos</h3>
+          <p class="text-gray-600 text-center text-xs">Highlight your brand with cinematic aerial footage showcasing your team, site, or product in action.</p>
+        </div>
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/business-placeholder.jpg" alt="Business Promo" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700">Branded aerial showcases</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up" data-aos-delay="300">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-purple-600 text-4xl mb-4"><i class="fas fa-binoculars"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800">Roof Inspections</h3>
+          <p class="text-gray-600 text-center text-xs">Fast, safe, and high-resolution inspections for residential, commercial, or industrial roofs—no ladders needed.</p>
+        </div>
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/roof-placeholder.jpg" alt="Roof Inspection" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700">Safe, detailed inspections</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wedding Aerial Photography -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <!-- Front -->
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-pink-600 text-4xl mb-4"><i class="fas fa-heart"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800 text-center">Wedding Aerial Photography</h3>
+          <p class="text-gray-600 text-center text-xs">Capture unforgettable wedding moments with sweeping cinematic views of your special day and venue.</p>
+        </div>
+        <!-- Back -->
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/wedding-placeholder.jpg" alt="Wedding Aerial" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700 text-center">Aerial memories of your big day</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agricultural Surveys -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-indigo-600 text-4xl mb-4"><i class="fas fa-tractor"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800">Agricultural Surveys</h3>
+          <p class="text-gray-600 text-center text-xs">Drone insights for crop health, livestock monitoring, and efficient land management across Hampshire farms.</p>
+        </div>
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/agriculture-placeholder.jpg" alt="Agriculture Survey" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700">Precision insights for Hampshire farms</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Construction Site Monitoring -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-red-600 text-4xl mb-4"><i class="fas fa-hammer"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800 text-center">Construction Site Monitoring</h3>
+          <p class="text-gray-600 text-center text-xs">Track project progress with scheduled drone flyovers—ideal for updates, safety audits, and time-lapses.</p>
+        </div>
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/construction-placeholder.jpg" alt="Construction Monitoring" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700">Visualise project progress from above</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tourism & Heritage Films -->
+    <div class="relative w-full h-72 perspective" data-aos="fade-up" data-aos-delay="300">
+      <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+        <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
+          <div class="text-teal-600 text-4xl mb-4"><i class="fas fa-campground"></i></div>
+          <h3 class="text-xl font-semibold text-gray-800">Tourism & Heritage Films</h3>
+          <p class="text-gray-600 text-center text-xs">Engage visitors with aerial footage of Hampshire's stunning coastlines, countryside, and historic landmarks.</p>
+        </div>
+        <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
+          <img src="./images/services/tourism-placeholder.jpg" alt="Tourism Film" class="rounded-lg object-cover h-40 mb-2">
+          <p class="text-sm text-gray-700">Cinematic views of Hampshire’s history</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .perspective {
+    perspective: 1000px;
+  }
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .hover\:rotate-y-180:hover {
+    transform: rotateY(180deg);
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+</style>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-6 text-center">
+    <p>&copy; 2025 JT Drones. All rights reserved.</p>
+    <p class="text-sm text-gray-400"><a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+      <!-- Contact Form Modal -->
+<div id="contactModal" class="modal hidden fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-xl max-w-md w-full mx-auto relative">
+    <button onclick="toggleContactModal()" class="absolute top-4 right-4 text-xl">&times;</button>
+    <h2 class="text-2xl font-bold mb-4 text-center">Book a Call</h2>
+    <form action="https://formsubmit.co/admin@jt-drones.co.uk" method="POST" class="space-y-4" enctype="multipart/form-data">
+      <div>
+        <label for="name" class="block font-semibold">Name<span class="text-red-500">*</span></label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <div>
+        <label for="email" class="block font-semibold">Email<span class="text-red-500">*</span></label>
+        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <div>
+        <label for="phone" class="block font-semibold">Phone Number<span class="text-red-500">*</span></label>
+        <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <div>
+        <label for="description" class="block font-semibold">Description of the Job<span class="text-red-500">*</span></label>
+        <textarea id="description" name="description" required class="w-full border border-gray-300 rounded-lg px-4 py-2"></textarea>
+      </div>
+      <div>
+        <label for="file" class="block font-semibold">Upload an Example Image (JPEG/PNG)</label>
+        <input type="file" id="file" name="file" accept="image/png, image/jpeg" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Submit</button>
+    </form>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    window.addEventListener("scroll", handleNavbarScroll);
+    document.addEventListener("DOMContentLoaded", handleNavbarScroll);
+
+    function toggleContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.toggle('hidden');
+    modal.classList.toggle('open');
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+  }
+  </script>
+  
+</body>
+</html>

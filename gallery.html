@@ -19,6 +19,26 @@
   <title>Gallery | JT Drones</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "JT Drones",
+    "url": "https://jt-drones.co.uk",
+    "description": "Aerial drone photography, roof inspections, and land surveys across the UK.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "UK"
+    },
+    "sameAs": [
+      "https://www.instagram.com/jtdrones",
+      "https://www.facebook.com/profile.php?id=61576260053191"
+    ]
+  }
+  </script>
+  
   <style>
     .modal {
       display: none;
@@ -30,7 +50,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
-  <!-- Contact Form Modal -->
+<!-- Contact Form Modal -->
 <div id="contactModal" class="modal hidden fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50">
   <div class="bg-white p-8 rounded-xl max-w-md w-full mx-auto relative">
     <button onclick="toggleContactModal()" class="absolute top-4 right-4 text-xl">&times;</button>
@@ -72,7 +92,7 @@
     </div>
     <ul id="navLinks" class="hidden md:flex gap-6 items-center text-gray-800 font-medium">
       <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
-      <li><a href="./index.html#services" class="hover:text-blue-600">Services</a></li>
+      <li><a href="./services.html" class="hover:text-blue-600">Services</a></li>
       <li><a href="./index.html#testimonials" class="hover:text-blue-600">Testimonials</a></li>
       <li><a href="./gallery.html" class="hover:text-blue-600 font-semibold">Gallery</a></li>
       <li><a href="./contactus.html" class="hover:text-blue-600">Contact</a></li>
@@ -86,7 +106,7 @@
   <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pb-4">
     <ul class="space-y-2">
       <li><a href="./index.html" class="block py-2 hover:text-blue-600">Home</a></li>
-      <li><a href="./index.html#services" class="block py-2 hover:text-blue-600">Services</a></li>
+      <li><a href="./services.html" class="block py-2 hover:text-blue-600">Services</a></li>
       <li><a href="./index.html#testimonials" class="block py-2 hover:text-blue-600">Testimonials</a></li>
       <li><a href="./gallery.html" class="block py-2 hover:text-blue-600 font-semibold">Gallery</a></li>
       <li><a href="./contactus.html" class="block py-2 hover:text-blue-600">Contact</a></li>
@@ -112,20 +132,36 @@
   </div>
 </div>
 
+
+
 <!-- Gallery Section -->
 <main class="max-w-7xl mx-auto px-4 py-16">
   <h1 class="text-4xl font-bold text-center mb-10">Gallery</h1>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <img src="./images/gallery/DJI_0036.JPG" alt="Gallery Image 1" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0040.JPG" alt="Gallery Image 2" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0042.JPG" alt="Gallery Image 3" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0057.JPG" alt="Gallery Image 4" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0063.JPG" alt="Gallery Image 5" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0071.JPG" alt="Gallery Image 6" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0075.JPG" alt="Gallery Image 4" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0069.JPG" alt="Gallery Image 5" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-    <img src="./images/gallery/DJI_0080.JPG" alt="Gallery Image 6" class="rounded-lg shadow-md cursor-pointer hover:scale-105 transition" onclick="openModal(this.src)" />
-  </div>
+  <div class="relative flex items-center justify-center my-10">
+
+  <!-- Left Arrow -->
+  <button onclick="prevPage()" class="hidden md:flex items-center justify-center absolute -left-20 z-10 bg-blue-600 text-white w-12 h-12 rounded-full shadow hover:bg-blue-700">
+    <i class="fas fa-chevron-left text-2xl"></i>
+  </button>
+
+  <!-- Gallery Grid (unchanged) -->
+  <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+
+  <!-- Right Arrow -->
+  <button onclick="nextPage()" class="hidden md:flex items-center justify-center absolute -right-20 z-10 bg-blue-600 text-white w-12 h-12 rounded-full shadow hover:bg-blue-700">
+    <i class="fas fa-chevron-right text-2xl"></i>
+  </button>
+
+  
+</div>
+
+<div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+
+<div class="flex justify-center mt-8 gap-4">
+  
+  <button onclick="prevPage()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Previous</button>
+  <button onclick="nextPage()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Next</button>
+</div>
   <!-- 360 Photo Embed -->
    
 <div class="w-full flex justify-center mt-20">
@@ -166,6 +202,7 @@
   </div>
 </footer>
 
+
 <!-- Scripts -->
 <script>
   function toggleMenu() {
@@ -197,6 +234,61 @@
   const menu = document.getElementById("mobileMenu");
   menu.classList.toggle("hidden");
 }
+
+const images = [
+    "./images/gallery/DJI_0036.JPG",
+    "./images/gallery/DJI_0040.JPG",
+    "./images/gallery/DJI_0042.JPG",
+    "./images/gallery/DJI_0057.JPG",
+    "./images/gallery/DJI_0063.JPG",
+    "./images/gallery/DJI_0071.JPG",
+    "./images/gallery/DJI_0075.JPG",
+    "./images/gallery/DJI_0069.JPG",
+    "./images/gallery/DJI_0080.JPG",
+    "./images/gallery/DJI_0087.JPG",
+    "./images/gallery/DJI_0089.JPG",
+    "./images/gallery/DJI_0067.JPG",
+    "./images/gallery/DJI_0050.JPG"
+    // Add more image paths here
+  ];
+
+  let currentPage = 1;
+  const imagesPerPage = 9;
+
+  function renderGallery() {
+    const gallery = document.getElementById("gallery");
+    gallery.innerHTML = "";
+
+    const start = (currentPage - 1) * imagesPerPage;
+    const end = start + imagesPerPage;
+    const pageImages = images.slice(start, end);
+
+    for (let src of pageImages) {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "Gallery Image";
+      img.className = "rounded-lg shadow-md cursor-pointer hover:scale-105 transition";
+      img.onclick = () => openModal(src);
+      gallery.appendChild(img);
+    }
+  }
+
+  function nextPage() {
+    if (currentPage * imagesPerPage < images.length) {
+      currentPage++;
+      renderGallery();
+    }
+  }
+
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderGallery();
+    }
+  }
+
+  // Initial render
+  renderGallery();
 </script>
 </body>
 </html>
