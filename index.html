@@ -314,6 +314,17 @@
   </div>
 </footer>
 
+<!-- COOKIE CONSENT BANNER -->
+  <div id="cookie-banner" class="hidden fixed bottom-0 left-0 w-full bg-gray-900 text-white p-4 z-50 shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-center md:text-left">We use cookies to enhance your browsing experience. By clicking &ldquo;Accept&rdquo; you agree to the storing of analytics cookies on your device. <a href="privacy.html" class="underline">Learn more</a>.</p>
+      <div class="flex gap-2 flex-shrink-0 self-center md:self-auto">
+        <button id="accept-cookies" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm font-semibold">Accept</button>
+        <button id="decline-cookies" class="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded text-sm font-semibold">Decline</button>
+      </div>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <!-- Modal Script -->
   <script>
@@ -361,7 +372,60 @@
   window.addEventListener("scroll", handleNavbarScroll);
   document.addEventListener("DOMContentLoaded", handleNavbarScroll);
 
-  
+  /* --------------------------------------------------
+       Cookie helpers
+    --------------------------------------------------*/
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + d.toUTCString();
+      document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+    }
+
+    function getCookie(name) {
+      const cname = name + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1);
+        if (c.indexOf(cname) === 0) {
+          return c.substring(cname.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function enableAnalytics() {
+      // Tell GA that consent has been granted
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    }
+
+    /* --------------------------------------------------
+       Initialise cookie banner
+    --------------------------------------------------*/
+    document.addEventListener('DOMContentLoaded', () => {
+      const banner = document.getElementById('cookie-banner');
+      const consent = getCookie('cookie_consent');
+      if (!consent) {
+        banner.classList.remove('hidden');
+      } else if (consent === 'true') {
+        enableAnalytics();
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 180);
+        enableAnalytics();
+        banner.classList.add('hidden');
+      });
+
+      document.getElementById('decline-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'false', 180);
+        banner.classList.add('hidden');
+      });
+    });
     
   </script>
   
