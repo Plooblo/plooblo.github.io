@@ -4,15 +4,26 @@
 <head>
   <meta charset="UTF-8">
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VG5N6LJYTV"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+  <!-- GA script is still loaded asynchronously, but cookies are blocked until the visitor consents -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG5N6LJYTV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
 
-	  gtag('config', 'G-VG5N6LJYTV');
-	</script>
-	<!-- Google tag (gtag.js) -->
+    /*
+      Default all analytics cookies to *denied* so that no personal data
+      is stored until the visitor explicitly opts‑in from the cookie banner.
+    */
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+
+    gtag('js', new Date());
+
+    // Configure GA.  "anonymize_ip" keeps IP addresses GDPR‑friendly.
+    gtag('config', 'G-VG5N6LJYTV', { 'anonymize_ip': true });
+  </script>
+  <!-- End Google tag (gtag.js) -->
 	
   
   <meta name="robots" content="index, follow">
