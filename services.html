@@ -48,6 +48,7 @@
     .modal.open {
       display: flex;
     }
+    
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
@@ -86,11 +87,86 @@
   </div>
 </nav>
 
-  <!-- Services Header -->
-  <header class="pt-40 pb-20 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
+  <!-- Drone Services Pricing Section -->
+<section class="py-20 bg-gray-50">
+  <div class="pt-10 text-center mb-12">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-down">Drone Service Packages</h2>
+    <p class="text-gray-600" data-aos="fade-down">Choose a plan that fits your project’s scale and scope.</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+    <!-- Starter Plan -->
+    <div class="group bg-white p-8 rounded-xl flex-col border-gray-200 flex justify-between border text-center shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+      <div class="text-blue-600 text-4xl mb-1 transition duration-300 group-hover:text-orange-400 group-hover:animate-pulse group-hover:-rotate-12">
+        <i class="fas fa-paper-plane"></i>
+      </div>
+      <h3 class="text-2xl font-semibold text-blue-600 mb-2">Starter</h3>
+      <p class="text-4xl font-bold mb-4">£50</p>
+      <ul class="text-sm text-gray-700 space-y-3 mb-6">
+        <li class="flex items-start gap-2 text-left">✅ 10 aerial drone photos</li>
+        <li class="flex items-start gap-2 text-left">✅ Roof inspection</li>
+        <li class="flex items-start gap-2 text-left">✅ 1 location</li>
+        <li class="flex items-start gap-2 text-left">✅ 1080p Photography 📸</li>
+        <li class="flex items-start gap-2 text-left">✅ 72-hour delivery</li>
+      </ul>
+      <a href="#contactModal" onclick="toggleContactModal()" class="px-6 text-white py-2 hover:bg-blue-700 bg-blue-600 mt-auto rounded-full inline-block">Get Started</a>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="group bg-white p-8 border-blue-600 rounded-xl flex-col flex justify-between border-4 text-center shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+      <div class="text-blue-600 text-4xl mb-1 transition duration-300 group-hover:text-green-400 group-hover:animate-pulse group-hover:-rotate-12">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <h3 class="text-2xl font-semibold text-blue-600 mb-2">Pro</h3>
+      <p class="text-4xl font-bold mb-4">£80</p>
+      <ul class="text-sm text-gray-700 space-y-3 mb-6">
+        <li class="flex items-start gap-2 text-left">✅ 20 drone photos</li>
+        <li class="flex items-start gap-2 text-left">✅ Simple Colour Grading</li>
+        <li class="flex items-start gap-2 text-left">✅ 1-2 minute edited video</li>
+        <li class="flex items-start gap-2 text-left">✅ Roof + 1x 360° photos</li>
+        <li class="flex items-start gap-2 text-left">✅ 4k Photography 📸 1080p 60fps</li>
+        <li class="flex items-start gap-2 text-left">✅ 2 locations</li>
+        <li class="flex items-start gap-2 text-left">✅ Branded video overlay</li>
+        <li class="flex items-start gap-2 text-left">✅ 48-hour delivery</li>
+      </ul>
+      <a href="#contactModal" onclick="toggleContactModal()" class="px-6 text-white py-2 hover:bg-blue-700 bg-blue-600 mt-auto rounded-full inline-block">Most Popular</a>
+    </div>
+
+    <!-- Elite Plan -->
+    <!-- Wrapper with animated border -->
+    <div class="relative rounded-xl bg-gradient-to-r p-[4px] from-pink-500 via-yellow-400 to-purple-500 bg-[length:300%_300%] animate-border-sweep transition duration-300 hover:scale-105 hover:shadow-2xl group">
+
+  <!-- Elite Card Content -->
+  <div class="bg-white rounded-xl p-8 flex-col border-gray-200 flex justify-between border text-center shadow-xl transform ">
+    
+    <!-- Crown Icon -->
+    <div class="text-blue-600 text-4xl mb-4 transition duration-300 group-hover:text-yellow-400 group-hover:animate-pulse group-hover:-rotate-12">
+      <i class="fas fa-crown"></i>
+    </div>
+    
+    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Elite</h3>
+      <p class="text-4xl font-bold mb-4">£100</p>
+      <ul class="text-sm text-gray-700 space-y-3 mb-6">
+        <li class="flex items-start gap-2 text-left">✅ 30+ images & footage</li>
+        <li class="flex items-start gap-2 text-left">✅ Colour grading / Colour Correction</li>
+        <li class="flex items-start gap-2 text-left">✅ 3-4 minute edited video</li>
+        <li class="flex items-start gap-2 text-left">✅ Full inspection + 3x 360° photos</li>
+        <li class="flex items-start gap-2 text-left">✅ 4k Photography 📸 4K 30fps</li>
+        <li class="flex items-start gap-2 text-left">✅ Multi-location coverage</li>
+        <li class="flex items-start gap-2 text-left">✅ Branded video overlay</li>
+        <li class="flex items-start gap-2 text-left">✅ 24-hour delivery</li>
+      </ul>
+      <a href="#contactModal" onclick="toggleContactModal()" class="px-6 text-white py-2 hover:bg-blue-700 bg-blue-600 mt-auto rounded-full inline-block">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Header -->
+  <header class="pt-20 pb-20 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
     <h1 class="text-5xl font-bold mb-4">Our Services</h1>
     <p class="text-lg">Explore how JT Drones can elevate your projects with cutting-edge aerial solutions.</p>
   </header>
+
 
   <!-- Services Section -->
   <section class="py-20 bg-white">
@@ -100,8 +176,7 @@
       <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-video"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800">2-Minute Drone Promos</h3>
-          <p class="text-gray-600 text-center text-xs">Tailored short-form aerial videos perfect for websites, social media, and event marketing.</p>
+          <h3 class="text-l font-semibold text-gray-800">2-Minute Drone Promos</h3>
         </div>
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
           <img src="./images/services/promo-placeholder.jpg" alt="Promo Example" class="rounded-lg object-cover h-40 mb-2">
@@ -114,8 +189,7 @@
       <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-green-600 text-4xl mb-4"><i class="fas fa-vr-cardboard"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800">Google Maps 360° Tours</h3>
-          <p class="text-gray-600 text-center text-xs">Immersive aerial 360° photo packages for businesses looking to stand out on Google Maps and Street View.</p>
+          <h3 class="text-l font-semibold text-gray-800">Google Maps 360° Tours</h3>
         </div>
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
           <img src="./images/services/360-placeholder.jpg" alt="360 Tour" class="rounded-lg object-cover h-40 mb-2">
@@ -128,8 +202,7 @@
       <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-yellow-600 text-4xl mb-4"><i class="fas fa-bullhorn"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800">Business Promo Videos</h3>
-          <p class="text-gray-600 text-center text-xs">Highlight your brand with cinematic aerial footage showcasing your team, site, or product in action.</p>
+          <h3 class="text-l font-semibold text-gray-800">Business Promo Videos</h3>
         </div>
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
           <img src="./images/services/business-placeholder.jpg" alt="Business Promo" class="rounded-lg object-cover h-40 mb-2">
@@ -142,8 +215,7 @@
       <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-purple-600 text-4xl mb-4"><i class="fas fa-binoculars"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800">Roof Inspections</h3>
-          <p class="text-gray-600 text-center text-xs">Fast, safe, and high-resolution inspections for residential, commercial, or industrial roofs—no ladders needed.</p>
+          <h3 class="text-l font-semibold text-gray-800">Roof Inspections</h3>
         </div>
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
           <img src="./images/services/roof-placeholder.jpg" alt="Roof Inspection" class="rounded-lg object-cover h-40 mb-2">
@@ -158,8 +230,7 @@
         <!-- Front -->
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-pink-600 text-4xl mb-4"><i class="fas fa-heart"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800 text-center">Wedding Aerial Photography</h3>
-          <p class="text-gray-600 text-center text-xs">Capture unforgettable wedding moments with sweeping cinematic views of your special day and venue.</p>
+          <h3 class="text-l font-semibold text-gray-800 text-center">Wedding Aerial Photography</h3>
         </div>
         <!-- Back -->
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
@@ -174,8 +245,7 @@
       <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-indigo-600 text-4xl mb-4"><i class="fas fa-tractor"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800">Agricultural Surveys</h3>
-          <p class="text-gray-600 text-center text-xs">Drone insights for crop health, livestock monitoring, and efficient land management across Hampshire farms.</p>
+          <h3 class="text-l font-semibold text-gray-800">Agricultural Surveys</h3>
         </div>
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
           <img src="./images/services/agriculture-placeholder.jpg" alt="Agriculture Survey" class="rounded-lg object-cover h-40 mb-2">
@@ -189,8 +259,7 @@
       <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-red-600 text-4xl mb-4"><i class="fas fa-hammer"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800 text-center">Construction Site Monitoring</h3>
-          <p class="text-gray-600 text-center text-xs">Track project progress with scheduled drone flyovers—ideal for updates, safety audits, and time-lapses.</p>
+          <h3 class="text-l font-semibold text-gray-800 text-center">Construction Site Monitoring</h3>
         </div>
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
           <img src="./images/services/construction-placeholder.jpg" alt="Construction Monitoring" class="rounded-lg object-cover h-40 mb-2">
@@ -204,8 +273,7 @@
       <div class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         <div class="absolute w-full h-full bg-white border rounded-xl shadow-xl flex flex-col justify-center items-center backface-hidden">
           <div class="text-teal-600 text-4xl mb-4"><i class="fas fa-campground"></i></div>
-          <h3 class="text-xl font-semibold text-gray-800">Tourism & Heritage Films</h3>
-          <p class="text-gray-600 text-center text-xs">Engage visitors with aerial footage of Hampshire's stunning coastlines, countryside, and historic landmarks.</p>
+          <h3 class="text-l font-semibold text-gray-800">Tourism & Heritage Films</h3>
         </div>
         <div class="absolute w-full h-full bg-gray-100 border rounded-xl shadow-xl rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4">
           <img src="./images/services/tourism-placeholder.jpg" alt="Tourism Film" class="rounded-lg object-cover h-40 mb-2">
@@ -231,6 +299,23 @@
   }
   .rotate-y-180 {
     transform: rotateY(180deg);
+  }
+
+  @layer utilities {
+    @keyframes border-sweep {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .animate-border-sweep {
+      animation: border-sweep 6s linear infinite;
+    }
   }
 </style>
 
