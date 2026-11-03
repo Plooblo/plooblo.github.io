@@ -1,382 +1,378 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG5N6LJYTV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VG5N6LJYTV');
-  </script>
-  <!-- Google tag (gtag.js) -->
-  
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drone Services &amp; Prices | Aerial Photography, Roof Inspections, 360° Tours | JT Drones</title>
+  <meta name="description" content="Drone photography packages from £50: aerial photos, edited drone video, drone roof inspections, Google Maps 360° tours, agricultural drone surveys and construction drone monitoring.">
+  <link rel="canonical" href="https://jt-drones.co.uk/services.html">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="JT Drones provides aerial photography, drone roof inspections, land surveys, and visuals to elevate your project.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>JT Drones | Our Services</title>
-  <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-  <!-- Structured Data -->
+  <meta name="theme-color" content="#0a0d12">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JT Drones">
+  <meta property="og:title" content="Drone Services &amp; Packages | JT Drones">
+  <meta property="og:description" content="Starter £50, Pro £80, Elite £100 — plus roof inspections, 360° tours, promo videos and surveys.">
+  <meta property="og:url" content="https://jt-drones.co.uk/services.html">
+  <meta property="og:image" content="https://jt-drones.co.uk/images/web/DJI_0089-1920.jpg">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+  <link rel="stylesheet" href="css/site.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "JT Drones",
-    "url": "https://jt-drones.co.uk",
-    "description": "Aerial drone photography, roof inspections, and land surveys across the UK.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "UK"
-    },
-    "sameAs": [
-      "https://www.instagram.com/jtdrones",
-      "https://www.facebook.com/profile.php?id=61576260053191"
+    "@type": "OfferCatalog",
+    "name": "JT Drones drone photography packages",
+    "url": "https://jt-drones.co.uk/services.html",
+    "provider": { "@type": "ProfessionalService", "@id": "https://jt-drones.co.uk/#business", "name": "JT Drones", "url": "https://jt-drones.co.uk/" },
+    "itemListElement": [
+      { "@type": "Offer", "name": "Starter", "price": "50", "priceCurrency": "GBP", "description": "10 aerial drone photos, roof inspection, 1 location, 1080p photography, 72-hour delivery." },
+      { "@type": "Offer", "name": "Pro", "price": "80", "priceCurrency": "GBP", "description": "20 aerial drone photos, simple colour grading, 1–2 minute edited video, roof inspection and one 360° photo, 4K photography, 1080p 60fps video, 2 locations, branded video overlay, 48-hour delivery." },
+      { "@type": "Offer", "name": "Elite", "price": "100", "priceCurrency": "GBP", "description": "30+ aerial drone photos and footage, colour grading and correction, 3–4 minute edited video, full inspection and three 360° photos, 4K photography and 4K 30fps video, multiple locations, branded video overlay, 24-hour delivery." }
     ]
   }
   </script>
-
-  <style>
-    .modal {
-      display: none;
-    }
-    .modal.open {
-      display: flex;
-    }
-    
-  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
-
-  <!-- Navbar -->
-  <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="./index.html"><img src="./images/brand.png" alt="JT Drones Logo" class="h-12"></a>
-      <ul class="hidden md:flex gap-6 items-center text-gray-800 font-medium">
-        <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
-        <li><a href="./services.html" class="hover:text-blue-600 font-semibold">Services</a></li>
-        <li><a href="./index.html#testimonials" class="hover:text-blue-600">Testimonials</a></li>
-        <li><a href="./gallery.html" class="hover:text-blue-600">Gallery</a></li>
-        <li><a href="./contactus.html" class="hover:text-blue-600">Contact</a></li>
-        <li>
-        <button onclick="toggleContactModal()" class="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
-          Book a Call
-        </button>
-      </li>
+<body>
+<!-- partial:header -->
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"/></symbol>
+</svg>
+<header class="site-header" id="top">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="JT Drones home">
+      <img src="images/brand-white.png" alt="JT Drones" width="160" height="112">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a class="btn btn--sm" href="contactus.html#book" data-book>Book a Call</a></li>
       </ul>
-    </div>
-  </nav>
-
-  <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pb-4">
-    <ul class="space-y-2">
-      <li><a href="./index.html" class="block py-2 hover:text-blue-600">Home</a></li>
-      <li><a href="./services.html" class="block py-2 hover:text-blue-600">Services</a></li>
-      <li><a href="./index.html#testimonials" class="block py-2 hover:text-blue-600">Testimonials</a></li>
-      <li><a href="./gallery.html" class="block py-2 hover:text-blue-600 font-semibold">Gallery</a></li>
-      <li><a href="./contactus.html" class="block py-2 hover:text-blue-600">Contact</a></li>
-      <li>
-        <button onclick="toggleContactModal()" class="w-full mt-2 bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
-          Book a Call
-        </button>
-      </li>
-    </ul>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="sr-only">Menu</span>
+      <svg class="i i-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="i i-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
   </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" aria-current="page">Services</a></li>
+    <li><a href="index.html#testimonials">Testimonials</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contactus.html">Contact</a></li>
+  </ul>
+  <a class="btn btn--block" href="contactus.html#book" data-book>Book a Call</a>
 </nav>
+<!-- /partial -->
 
-  <!-- Drone Services Pricing Section -->
-<section class="py-20 bg-gray-50">
-  <div class="pt-10 text-center mb-12">
-    <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-down">Drone Service Packages</h2>
-    <p class="text-gray-600" data-aos="fade-down">Choose a plan that fits your project's scale and scope.</p>
-  </div>
-
-  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
-    <!-- Starter Plan -->
-    <div class="group bg-white p-8 rounded-xl flex-col border-gray-200 flex justify-between border text-center shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-      <div class="text-blue-600 text-4xl mb-1 transition duration-300 group-hover:text-orange-400 group-hover:animate-pulse group-hover:-rotate-12">
-        <i class="fas fa-paper-plane"></i>
-      </div>
-      <h3 class="text-2xl font-semibold text-blue-600 mb-2">Starter</h3>
-      <p class="text-4xl font-bold mb-4">£50</p>
-      <ul class="text-sm text-gray-700 space-y-3 mb-6">
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>10 Aerial Drone Photos</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Roof Inspection</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>1 Location</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>1080p Photography 📸</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>72-hour Delivery</span></li>
-      </ul>
-      <a href="#contactModal" onclick="toggleContactModal()" class="px-6 text-white py-2 hover:bg-blue-700 bg-blue-600 mt-auto rounded-full inline-block">Get Started</a>
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title">
+    <img class="page-hero__bg" src="images/web/DJI_0089-1920.jpg" alt="" width="1920" height="1080" fetchpriority="high">
+    <div class="container">
+      <p class="eyebrow">Services &amp; pricing</p>
+      <h1 id="page-title">Our Services</h1>
+      <p class="lead">Explore how JT Drones can elevate your projects with aerial photography, video, inspections and 360° tours. Pick a package or ask about a specific job.</p>
     </div>
+  </section>
 
-    <!-- Pro Plan -->
-    <div class="group bg-white p-8 border-blue-600 rounded-xl flex-col flex justify-between border-4 text-center shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-      <div class="text-blue-600 text-4xl mb-1 transition duration-300 group-hover:text-green-400 group-hover:animate-pulse group-hover:-rotate-12">
-        <i class="fas fa-rocket"></i>
+  <section class="section" id="packages" aria-labelledby="packages-title">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <p class="eyebrow">Packages</p>
+          <h2 id="packages-title">Drone Service Packages</h2>
+        </div>
+        <p class="lead">Choose a plan that fits your project’s scale and scope. Simple, fixed prices with clear deliverables and turnaround times.</p>
       </div>
-      <h3 class="text-2xl font-semibold text-blue-600 mb-2">Pro</h3>
-      <p class="text-4xl font-bold mb-4">£80</p>
-      <ul class="text-sm text-gray-700 space-y-3 mb-6">
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>20 Aerial Drone Photos</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Simple Colour Grading</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>1-2 Minute Edited Video</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Roof Inspection & 1x 360° Photos</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>4k Photography 📸 1080p 60fps</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>2 Locations</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Branded Video Overlay</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>48-hour Delivery</span></li>
-
-      </ul>
-      <a href="#contactModal" onclick="toggleContactModal()" class="px-6 text-white py-2 hover:bg-blue-700 bg-blue-600 mt-auto rounded-full inline-block">Most Popular</a>
-    </div>
-
-    <!-- Elite Plan -->
-    <!-- Wrapper with animated border -->
-    <div class="relative rounded-xl bg-gradient-to-r p-[4px] from-pink-500 via-yellow-400 to-purple-500 bg-[length:300%_300%] animate-border-sweep transition duration-300 hover:scale-105 hover:shadow-2xl group">
-
-  <!-- Elite Card Content -->
-  <div class="bg-white rounded-xl p-8 flex-col border-gray-200 flex justify-between border text-center shadow-xl transform ">
-    
-    <!-- Crown Icon -->
-    <div class="text-blue-600 text-4xl mb-4 transition duration-300 group-hover:text-yellow-400 group-hover:animate-pulse group-hover:-rotate-12">
-      <i class="fas fa-crown"></i>
-    </div>
-    
-    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Elite</h3>
-      <p class="text-4xl font-bold mb-4">£100</p>
-      <ul class="text-sm text-gray-700 space-y-3 mb-6">
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>30+ Aerial Drone Photos & Footage</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Colour Grading / Colour Correction</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>3-4 Minute Edited Video</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Full Inspection & 3x 360° photos</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>4k Photography 📸 4K 30fps</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Multi-location Coverage</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>Branded Video Overlay</span></li>
-        <li class="flex items-center gap-2 text-left"><i class="fa-solid fa-check text-blue-600 text-[1.125rem]"></i><span>24-hour Delivery</span></li>
-      </ul>
-      <a href="#contactModal" onclick="toggleContactModal()" class="px-6 text-white py-2 hover:bg-blue-700 bg-blue-600 mt-auto rounded-full inline-block">Book Now</a>
-    </div>
-  </div>
-</section>
-
-<!-- Services Header -->
-  <header class="relative pt-20 pb-20 text-white text-center overflow-hidden">
-    <!-- Parallax Background Image -->
-    <div class="absolute inset-0 w-full h-full bg-fixed bg-center bg-cover" style="background-image: url('./images/parallax-drone.jpg'), linear-gradient(to right, #2563ebcc, #60a5facc); z-index: 0;"></div>
-    <!-- Animated Gradient Overlay -->
-    <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600/80 via-blue-400/60 to-purple-500/80 animate-gradient-x z-10"></div>
-    <div class="relative z-20 flex flex-col items-center justify-center h-full" data-aos="fade-up">
-      <h1 class="text-5xl font-bold mb-4 drop-shadow-lg animate-fade-in">Our Services</h1>
-      <p class="text-lg drop-shadow-md animate-fade-in delay-200">Explore how JT Drones can elevate your projects with cutting-edge aerial solutions.</p>
-    </div>
-    <style>
-      @keyframes gradient-x {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-      }
-      .animate-gradient-x {
-        background-size: 200% 200%;
-        animation: gradient-x 8s ease-in-out infinite;
-      }
-      @keyframes fade-in {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      .animate-fade-in {
-        animation: fade-in 1.2s cubic-bezier(0.4,0,0.2,1) both;
-      }
-      .delay-200 { animation-delay: 0.2s; }
-    </style>
-  </header>
-
-
-  <!-- Services Section -->
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
-      <!-- Card 1 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-blue-600 text-4xl mb-3">
-            <i class="fas fa-video"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">2-Minute Drone Promos</h3>
-          <p class="text-gray-600 text-sm text-center">Quick and engaging aerial promos</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/promo-placeholder.jpg" alt="Promo Example" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">See your business from a new perspective with our fast-turnaround promo videos.</p>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-blue-400"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-green-600 text-4xl mb-3">
-            <i class="fas fa-vr-cardboard"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Google Maps 360° Tours</h3>
-          <p class="text-gray-600 text-sm text-center">Interactive 360° business views</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/360-placeholder.jpg" alt="360 Tour" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">Let customers explore your business virtually with immersive 360° tours.</p>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 to-pink-400"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-yellow-600 text-4xl mb-3">
-            <i class="fas fa-bullhorn"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Business Promo Videos</h3>
-          <p class="text-gray-600 text-sm text-center">Branded aerial showcases</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/business-placeholder.jpg" alt="Business Promo" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">Showcase your business with stunning branded aerial videos.</p>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-blue-500"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-purple-600 text-4xl mb-3">
-            <i class="fas fa-binoculars"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Roof Inspections</h3>
-          <p class="text-gray-600 text-sm text-center">Safe, detailed inspections</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/roof-placeholder.jpg" alt="Roof Inspection" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">Get a close look at your roof without the risk, thanks to high-res drone imagery.</p>
-        </div>
-      </div>
-      <!-- Card 5 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-red-400"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-pink-600 text-4xl mb-3">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Wedding Aerial Photography</h3>
-          <p class="text-gray-600 text-sm text-center">Aerial memories of your big day</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/wedding-placeholder.jpg" alt="Wedding Aerial" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">Capture breathtaking aerial moments from your wedding day.</p>
-        </div>
-      </div>
-      <!-- Card 6 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-400 to-green-400"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-indigo-600 text-4xl mb-3">
-            <i class="fas fa-tractor"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Agricultural Surveys</h3>
-          <p class="text-gray-600 text-sm text-center">Precision insights for Hampshire farms</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/agriculture-placeholder.jpg" alt="Agriculture Survey" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">Monitor crops and land with detailed aerial surveys.</p>
-        </div>
-      </div>
-      <!-- Card 7 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-400 to-yellow-400"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-red-600 text-4xl mb-3">
-            <i class="fas fa-hammer"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Construction Site Monitoring</h3>
-          <p class="text-gray-600 text-sm text-center">Visualise project progress from above</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/construction-placeholder.jpg" alt="Construction Monitoring" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">Track construction progress and site safety with regular aerial updates.</p>
-        </div>
-      </div>
-      <!-- Card 8 -->
-      <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 min-h-[18rem] flex flex-col h-full">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-400 to-blue-400"></div>
-        <div class="flex-1 flex flex-col justify-center items-center p-6">
-          <div class="text-teal-600 text-4xl mb-3">
-            <i class="fas fa-campground"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Tourism & Heritage Films</h3>
-          <p class="text-gray-600 text-sm text-center">Cinematic views of Hampshire's history</p>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-90 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 pt-8 z-10">
-          <img src="./images/services/tourism-placeholder.jpg" alt="Tourism Film" class="rounded-lg object-cover h-32 mb-2 shadow-lg">
-          <p class="text-white text-sm text-center">Bring local history and attractions to life with cinematic drone footage.</p>
-        </div>
+      <div class="pricing">
+        <article class="plan reveal" aria-labelledby="plan-starter">
+          <h3 class="plan__name" id="plan-starter">Starter</h3>
+          <p class="plan__price">£50</p>
+          <p class="plan__note">Quick, high-quality stills for one property.</p>
+          <ul>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>10 aerial drone photos</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Roof inspection</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>1 location</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>1080p photography</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>72-hour delivery</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="contactus.html#book" data-book data-service="Starter package (£50)">Get started</a>
+        </article>
+        <article class="plan plan--featured reveal" aria-labelledby="plan-pro">
+          <span class="badge">Most popular</span>
+          <h3 class="plan__name" id="plan-pro">Pro</h3>
+          <p class="plan__price">£80</p>
+          <p class="plan__note">Photos, a short edited film and a 360° view.</p>
+          <ul>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>20 aerial drone photos</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Simple colour grading</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>1–2 minute edited video</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Roof inspection and one 360° photo</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>4K photography, 1080p 60fps video</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>2 locations</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Branded video overlay</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>48-hour delivery</li>
+          </ul>
+          <a class="btn btn--block" href="contactus.html#book" data-book data-service="Pro package (£80)">Book the Pro package <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="plan reveal" aria-labelledby="plan-elite">
+          <h3 class="plan__name" id="plan-elite">Elite</h3>
+          <p class="plan__price">£100</p>
+          <p class="plan__note">Full coverage, 4K video and next-day delivery.</p>
+          <ul>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>30+ aerial drone photos and footage</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Colour grading and colour correction</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>3–4 minute edited video</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Full inspection and three 360° photos</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>4K photography and 4K 30fps video</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Multiple locations</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Branded video overlay</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>24-hour delivery</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="contactus.html#book" data-book data-service="Elite package (£100)">Book now</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-6 text-center">
-    <p>&copy; 2025 JT Drones. All rights reserved.</p>
-    <p class="text-sm text-gray-400"><a href="privacy.html">Privacy Policy</a></p>
-  </footer>
+  <section class="section section--alt" id="specialist" aria-labelledby="specialist-title">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <p class="eyebrow">Specialist services</p>
+          <h2 id="specialist-title">Aerial Solutions for Every Project</h2>
+        </div>
+        <p class="lead">Need something beyond a package? Tell us about the job and we’ll put together the right flight plan and deliverables.</p>
+      </div>
+      <div class="services">
+        <article class="service reveal" id="drone-promos">
+          <div class="service__media"><img src="images/web/promo-frame.jpg" alt="Still from a JT Drones promo film: a mountain valley with a winding road" loading="lazy" width="800" height="450"></div>
+          <div class="service__body">
+            <h3>2-Minute Drone Promos</h3>
+            <p>Quick and engaging aerial promos. See your business or property from a new perspective with our fast-turnaround promo videos.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="2-Minute Drone Promo">Enquire</a>
+          </div>
+        </article>
+        <article class="service reveal" id="360-tours">
+          <div class="service__media"><img src="images/services/360-placeholder.jpg" alt="Illustrative image of a waterfront business viewed from above" loading="lazy" width="291" height="254"><span class="tag">Illustrative</span></div>
+          <div class="service__body">
+            <h3>Google Maps 360° Tours</h3>
+            <p>Interactive 360° business views. Let customers explore your business virtually with immersive 360° tours. <a href="gallery.html#tour-360">Try one in our gallery</a>.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="Google Maps 360° Tour">Enquire</a>
+          </div>
+        </article>
+        <article class="service reveal" id="business-promo">
+          <div class="service__media"><img src="images/services/business-placeholder.jpg" alt="Illustrative image of a commercial yard and buildings from the air" loading="lazy" width="291" height="254"><span class="tag">Illustrative</span></div>
+          <div class="service__body">
+            <h3>Business Promo Videos</h3>
+            <p>Branded aerial showcases. Show off your premises, team and location with stunning branded aerial video.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="Business Promo Video">Enquire</a>
+          </div>
+        </article>
+        <article class="service reveal" id="roof-inspections">
+          <div class="service__media"><img src="images/web/DJI_0050-800.jpg" alt="Top-down drone photo of a tiled roof" loading="lazy" width="800" height="450"></div>
+          <div class="service__body">
+            <h3>Roof Inspections</h3>
+            <p>Safe, detailed inspections. Get a close look at your roof without the risk or the scaffolding, thanks to high-resolution drone imagery.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="Roof Inspection">Enquire</a>
+          </div>
+        </article>
+        <article class="service reveal" id="wedding">
+          <div class="service__media"><img src="images/services/wedding-placeholder.jpg" alt="Illustrative image of a couple on a lawn in front of a country house" loading="lazy" width="291" height="254"><span class="tag">Illustrative</span></div>
+          <div class="service__body">
+            <h3>Wedding Aerial Photography</h3>
+            <p>Aerial memories of your big day. Capture breathtaking aerial moments of your venue, guests and celebrations.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="Wedding Aerial Photography">Enquire</a>
+          </div>
+        </article>
+        <article class="service reveal" id="agricultural-surveys">
+          <div class="service__media"><img src="images/web/DJI_0040-800.jpg" alt="Aerial view across fields and farmland" loading="lazy" width="800" height="450"></div>
+          <div class="service__body">
+            <h3>Agricultural Surveys</h3>
+            <p>Precision insights for Hampshire farms. Monitor crops, boundaries and land with detailed aerial surveys.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="Agricultural Survey">Enquire</a>
+          </div>
+        </article>
+        <article class="service reveal" id="construction">
+          <div class="service__media"><img src="images/web/DJI_0075-800.jpg" alt="Overhead drone view of groundworks in progress in a garden" loading="lazy" width="800" height="450"></div>
+          <div class="service__body">
+            <h3>Construction Site Monitoring</h3>
+            <p>Visualise project progress from above. Track construction progress and site safety with regular aerial updates.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="Construction Site Monitoring">Enquire</a>
+          </div>
+        </article>
+        <article class="service reveal" id="tourism-heritage">
+          <div class="service__media"><img src="images/web/DJI_0036-800.jpg" alt="Aerial view over a mountain lake" loading="lazy" width="800" height="450"></div>
+          <div class="service__body">
+            <h3>Tourism &amp; Heritage Films</h3>
+            <p>Cinematic views of Hampshire’s history. Bring local history, landscapes and attractions to life with cinematic drone footage.</p>
+            <a class="btn btn--sm" href="contactus.html#book" data-book data-service="Tourism &amp; Heritage Film">Enquire</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <!-- Contact Form Modal -->
-<div id="contactModal" class="modal hidden fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50">
-  <div class="bg-white p-8 rounded-xl max-w-md w-full mx-auto relative">
-    <button onclick="toggleContactModal()" class="absolute top-4 right-4 text-xl">&times;</button>
-    <h2 class="text-2xl font-bold mb-4 text-center">Book a Call</h2>
-    <form action="https://formsubmit.co/admin@jt-drones.co.uk" method="POST" class="space-y-4" enctype="multipart/form-data">
-      <div>
-        <label for="name" class="block font-semibold">Name<span class="text-red-500">*</span></label>
-        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+  <section class="section cta" aria-labelledby="cta-title">
+    <img class="cta__bg" src="images/web/DJI_0087-1920.jpg" alt="" loading="lazy" width="1920" height="1080">
+    <div class="container reveal">
+      <p class="eyebrow">Not sure which to choose?</p>
+      <h2 id="cta-title">Let’s Plan Your Flight</h2>
+      <p class="lead">Book a free call and we’ll recommend the right package for your project.</p>
+      <div class="hero__actions">
+        <a class="btn btn--light" href="contactus.html#book" data-book>Book a Call <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- partial:footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand-white.png" alt="JT Drones" width="160" height="112" loading="lazy">
+        <p>Aerial photography, drone video, roof inspections and 360° tours, delivered fast and finished to a high standard.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/jtdrones" target="_blank" rel="noopener" aria-label="JT Drones on Instagram"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61576260053191" target="_blank" rel="noopener" aria-label="JT Drones on Facebook"><svg class="i" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        </div>
       </div>
       <div>
-        <label for="email" class="block font-semibold">Email<span class="text-red-500">*</span></label>
-        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html" aria-current="page">Services &amp; pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
       </div>
       <div>
-        <label for="phone" class="block font-semibold">Phone Number<span class="text-red-500">*</span></label>
-        <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+        <h3>Get in touch</h3>
+        <ul>
+          <li><a href="contactus.html#book" data-book>Book a call</a></li>
+          <li><a href="mailto:jackthomas11400@gmail.com">jackthomas11400@gmail.com</a></li>
+        </ul>
       </div>
-      <div>
-        <label for="description" class="block font-semibold">Description of the Job<span class="text-red-500">*</span></label>
-        <textarea id="description" name="description" required class="w-full border border-gray-300 rounded-lg px-4 py-2"></textarea>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> JT Drones. All rights reserved.</p>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <button class="linklike" type="button" data-cookie-settings>Cookie settings</button>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<dialog class="modal" id="book-dialog" aria-labelledby="book-title">
+  <div class="modal__head">
+    <div>
+      <h2 id="book-title">Book a Call</h2>
+      <p>Tell us about the job and we’ll get back to you to arrange a call.</p>
+    </div>
+    <button class="icon-btn" type="button" data-close aria-label="Close booking form"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="modal__body">
+    <form class="form" action="https://formsubmit.co/jackthomas11400@gmail.com" method="POST" enctype="multipart/form-data" data-validate novalidate>
+      <input type="hidden" name="_subject" value="New booking request — jt-drones.co.uk">
+      <input type="hidden" name="_next" value="https://jt-drones.co.uk/thanks.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="form" value="Book a Call">
+      <input type="hidden" name="service" value="" data-service-field>
+      <div class="hp" aria-hidden="true"><label>Leave blank <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+      <div class="form-alert form-alert--error" role="alert" hidden data-form-alert></div>
+      <div class="form__row form__row--2">
+        <div class="field">
+          <label for="b-name">Full name<span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="b-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="b-name-err">
+          <p class="field__error" id="b-name-err"></p>
+        </div>
+        <div class="field">
+          <label for="b-email">Email<span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="b-email" name="email" type="email" autocomplete="email" required maxlength="150" aria-describedby="b-email-err">
+          <p class="field__error" id="b-email-err"></p>
+        </div>
       </div>
-      <div>
-        <label for="file" class="block font-semibold">Upload an Example Image (JPEG/PNG)</label>
-        <input type="file" id="file" name="file" accept="image/png, image/jpeg" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+      <div class="field">
+        <label for="b-phone">Phone number<span class="req" aria-hidden="true">*</span></label>
+        <input class="input" id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" data-phone aria-describedby="b-phone-err">
+        <p class="field__error" id="b-phone-err"></p>
       </div>
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Submit</button>
+      <div class="field">
+        <label for="b-desc">Description of the job<span class="req" aria-hidden="true">*</span></label>
+        <textarea class="input" id="b-desc" name="description" required minlength="10" maxlength="3000" aria-describedby="b-desc-hint b-desc-err"></textarea>
+        <p class="field__hint" id="b-desc-hint">Location, type of shoot or inspection, and any dates you have in mind.</p>
+        <p class="field__error" id="b-desc-err"></p>
+      </div>
+      <div class="field">
+        <span class="label" id="b-file-label">Example image <span class="optional">(optional, JPEG or PNG, max 5 MB)</span></span>
+        <div class="upload" data-upload>
+          <input id="b-file" name="attachment" type="file" accept="image/jpeg,image/png" aria-labelledby="b-file-label" aria-describedby="b-file-err">
+          <div class="upload__zone"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg><span><strong>Choose an image</strong> or drag it here</span></div>
+        </div>
+        <div class="upload__preview" data-upload-preview>
+          <img alt="" data-upload-thumb>
+          <div class="upload__meta"><strong data-upload-name></strong><span data-upload-size></span></div>
+          <button class="upload__remove" type="button" data-upload-remove>Remove</button>
+        </div>
+        <p class="field__error" id="b-file-err"></p>
+      </div>
+      <button class="btn btn--block" type="submit">Submit request <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <p class="form-legal">Your details are sent securely by email via FormSubmit and used only to reply to your enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
     </form>
+  </div>
+</dialog>
+
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <div class="lightbox__bar">
+    <span data-lb-count aria-live="polite"></span>
+    <button class="icon-btn" type="button" data-close aria-label="Close image viewer"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="lightbox__stage">
+    <button class="icon-btn lightbox__prev" type="button" data-lb-prev aria-label="Previous image"><svg class="i" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+    <img alt="" data-lb-img>
+    <button class="icon-btn lightbox__next" type="button" data-lb-next aria-label="Next image"><svg class="i" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+  </div>
+  <p class="lightbox__caption" data-lb-caption></p>
+</dialog>
+
+<div class="cookie" id="cookie-banner" role="region" aria-labelledby="cookie-title" hidden>
+  <h2 id="cookie-title">Cookies</h2>
+  <p>We’d like to use optional Google Analytics cookies to understand how visitors use this site. They’re only set if you accept. <a href="privacy.html">Learn more</a>.</p>
+  <div class="cookie__actions">
+    <button class="btn btn--sm" type="button" data-cookie="accept">Accept analytics</button>
+    <button class="btn btn--sm btn--ghost" type="button" data-cookie="decline">Decline</button>
   </div>
 </div>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-
-    window.addEventListener("scroll", handleNavbarScroll);
-    document.addEventListener("DOMContentLoaded", handleNavbarScroll);
-
-    function toggleContactModal() {
-    const modal = document.getElementById('contactModal');
-    modal.classList.toggle('hidden');
-    modal.classList.toggle('open');
-  }
-
-  function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("hidden");
-  }
-  </script>
-  
+<script src="js/validate.js"></script>
+<script src="js/site.js"></script>
+<!-- /partial -->
 </body>
 </html>

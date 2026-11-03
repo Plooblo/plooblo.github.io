@@ -1,442 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-	<!-- Google tag (gtag.js) -->
-  <!-- GA script is still loaded asynchronously, but cookies are blocked until the visitor consents -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG5N6LJYTV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-
-    /*
-      Default all analytics cookies to *denied* so that no personal data
-      is stored until the visitor explicitly opts‑in from the cookie banner.
-    */
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied'
-    });
-
-    gtag('js', new Date());
-
-    // Configure GA.  "anonymize_ip" keeps IP addresses GDPR‑friendly.
-    gtag('config', 'G-VG5N6LJYTV', { 'anonymize_ip': true });
-  </script>
-  <!-- End Google tag (gtag.js) -->
-	
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drone Photography, Aerial Video &amp; Roof Inspections | JT Drones</title>
+  <meta name="description" content="JT Drones provides professional drone photography, aerial video, drone roof inspections and 360° virtual tours across the UK. Packages from £50 with 24–72 hour delivery.">
+  <link rel="canonical" href="https://jt-drones.co.uk/">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="JT Drones provides aerial photography, drone roof inspections, land surveys, and visuals to elevate your project.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JT Drones | Aerial Photography & Roof Inspection</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-  <!-- Structured Data -->
+  <meta name="theme-color" content="#0a0d12">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JT Drones">
+  <meta property="og:title" content="JT Drones | Capture the World From Above">
+  <meta property="og:description" content="Professional drone photography, aerial video, roof inspections and 360° tours. Packages from £50.">
+  <meta property="og:url" content="https://jt-drones.co.uk/">
+  <meta property="og:image" content="https://jt-drones.co.uk/images/web/DJI_0089-1920.jpg">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="preload" as="image" href="images/web/hero-poster.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
+    "@id": "https://jt-drones.co.uk/#business",
     "name": "JT Drones",
-    "url": "https://jt-drones.co.uk",
-    "description": "Aerial drone photography, roof inspections, and land surveys across the UK.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "UK"
-    },
+    "url": "https://jt-drones.co.uk/",
+    "logo": "https://jt-drones.co.uk/images/brand.png",
+    "image": "https://jt-drones.co.uk/images/web/DJI_0089-1920.jpg",
+    "description": "Drone photography, aerial videography, drone roof inspections, 360° virtual tours and commercial drone services.",
+    "email": "jackthomas11400@gmail.com",
+    "priceRange": "£50–£100",
+    "address": { "@type": "PostalAddress", "addressCountry": "GB" },
     "sameAs": [
       "https://www.instagram.com/jtdrones",
       "https://www.facebook.com/profile.php?id=61576260053191"
     ]
   }
   </script>
-
-  <style>
-    .modal {
-      display: none;
-    }
-    .modal.open {
-      display: flex;
-    }
-  </style>
 </head>
-
-<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
-
-  <!-- Navigation Bar -->
-<nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent backdrop-blur-sm">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-    <a href="#hero"><img src="./images/brand.png" alt="JT Drones Logo" class="h-12"></a>
-    <div class="md:hidden">
-      <button onclick="toggleMenu()" class="text-2xl">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <ul id="navLinks" class="hidden md:flex gap-6 items-center text-gray-800 font-medium">
-      <li><a href="#hero" class="hover:text-blue-600">Home</a></li>
-      <li><a href="./services.html" class="hover:text-blue-600">Services</a></li>
-      <li><a href="#testimonials" class="hover:text-blue-600">Testimonials</a></li>
-      <li><a href="./gallery.html" class="hover:text-blue-600">Gallery</a></li>
-      <li><a href="./contactus.html" class="hover:text-blue-600">Contact</a></li>
-      <li>
-        <button onclick="toggleContactModal()" class="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
-          Book a Call
-        </button>
-      </li>
-    </ul>
-  </div>
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="md:hidden hidden bg-white px-4 pb-4">
-    <ul class="space-y-2">
-      <li><a href="#hero" class="block py-2 hover:text-blue-600">Home</a></li>
-      <li><a href="./services.html" class="block py-2 hover:text-blue-600">Services</a></li>
-      <li><a href="#testimonials" class="block py-2 hover:text-blue-600">Testimonials</a></li>
-      <li><a href="./gallery.html" class="block py-2 hover:text-blue-600">Gallery</a></li>
-      <li><a href="./contactus.html" class="block py-2 hover:text-blue-600">Contact</a></li>
-      <li>
-        <button onclick="toggleContactModal()" class="w-full mt-2 bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
-          Book a Call
-        </button>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-
-  <!-- Contact Form Modal -->
-  <div id="contactModal" class="modal fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50">
-    <div class="bg-white p-8 rounded-xl max-w-md w-full mx-auto relative">
-      <button onclick="toggleContactModal()" class="absolute top-4 right-4 text-xl">&times;</button>
-      <h2 class="text-2xl font-bold mb-4 text-center">Book a Call</h2>
-      <form action="https://formsubmit.co/admin@jt-drones.co.uk" method="POST" class="space-y-4" enctype="multipart/form-data">
-        <div>
-          <label for="name" class="block font-semibold">Name<span class="text-red-500">*</span></label>
-          <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
-        </div>
-        <div>
-          <label for="email" class="block font-semibold">Email<span class="text-red-500">*</span></label>
-          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
-        </div>
-        <div>
-          <label for="phone" class="block font-semibold">Phone Number<span class="text-red-500">*</span></label>
-          <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
-        </div>
-        <div>
-          <label for="description" class="block font-semibold">Description of the Job<span class="text-red-500">*</span></label>
-          <textarea id="description" name="description" required class="w-full border border-gray-300 rounded-lg px-4 py-2"></textarea>
-        </div>
-        <div>
-          <label for="file" class="block font-semibold">Upload an Example Image (JPEG/PNG)</label>
-          <input type="file" id="file" name="file" accept="image/png, image/jpeg" class="w-full border border-gray-300 rounded-lg px-4 py-2">
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Submit</button>
-      </form>
-    </div>
-  </div>
-
-  
-
-  <section id="hero" class="relative h-screen text-white flex items-center justify-center overflow-hidden" >
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-      <source src="./videos/banner.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  
-    <!-- Dark Overlay and Content -->
-    <div class="relative z-10 px-4">
-      <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-xl p-8 text-center max-w-3xl mx-auto">
-        <h1 class="text-5xl font-bold mb-4 text-white">Capture the World From Above</h1>
-        <p class="text-lg mb-8 text-gray-200">JT Drones offers high-quality aerial photography, roof inspections, and landscaping visuals that elevate your perspective.</p>
-        <button onclick="toggleContactModal()" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-700 transition">Book a Call</button>
-      </div>
-    </div>
-  </section>
-  
-
-  </section>
-
- <!-- Services Section -->
-<section id="services" class="py-20 bg-white">
-  <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold text-gray-800">Our Services</h2>
-  </div>
-  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center " data-aos="fade-up" data-aos-delay="0">
-      <div class="text-blue-600 text-4xl mb-4">
-        <i class="fas fa-camera-retro"></i>
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Aerial Photography</h3>
-      <p class="text-gray-600">Stunning drone photography to showcase landscapes, properties, and events from above.</p>
-    </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="fade-up" data-aos-delay="200">
-      <div class="text-green-600 text-4xl mb-4">
-        <i class="fas fa-tools"></i>
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Roof Inspections</h3>
-      <p class="text-gray-600">Safe, detailed, and efficient drone inspections for roofs and high structures.</p>
-    </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="fade-up" data-aos-delay="400">
-      <div class="text-yellow-600 text-4xl mb-4">
-        <i class="fas fa-building"></i>
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Business Visuals</h3>
-      <p class="text-gray-600">High-quality visuals tailored to promote your brand and commercial locations.</p>
-    </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="fade-up" data-aos-delay="600">
-      <div class="text-purple-600 text-4xl mb-4">
-        <i class="fas fa-map-marked-alt"></i>
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Land Surveys</h3>
-      <p class="text-gray-600">Detailed aerial data collection and mapping for planning, construction, or agriculture.</p>
-    </div>
-  </div>
-  <div class="text-center mt-12">
-    <a href="./services.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition">
-      View All Services
+<body>
+<!-- partial:header -->
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"/></symbol>
+</svg>
+<header class="site-header" id="top">
+  <div class="container">
+    <a class="brand" href="index.html" aria-current="page" aria-label="JT Drones home">
+      <img src="images/brand-white.png" alt="JT Drones" width="160" height="112">
     </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a class="btn btn--sm" href="contactus.html#book" data-book>Book a Call</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="sr-only">Menu</span>
+      <svg class="i i-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="i i-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
   </div>
-</section>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <ul>
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#testimonials">Testimonials</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contactus.html">Contact</a></li>
+  </ul>
+  <a class="btn btn--block" href="contactus.html#book" data-book>Book a Call</a>
+</nav>
+<!-- /partial -->
 
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media">
+      <video autoplay muted loop playsinline preload="metadata" poster="images/web/hero-poster.jpg" aria-hidden="true">
+        <source src="videos/banner-540.mp4" type="video/mp4" media="(max-width: 760px)">
+        <source src="videos/banner-1080.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container hero__content">
+      <p class="eyebrow">Aerial photography · Video · Inspections</p>
+      <h1 id="hero-title">Capture the World From Above</h1>
+      <p class="lead">JT Drones offers high-quality aerial photography, drone video, roof inspections and 360° tours that show homes, land and businesses from a whole new perspective.</p>
+      <div class="hero__actions">
+        <a class="btn" href="contactus.html#book" data-book>Book a Call <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="gallery.html">View our work</a>
+      </div>
+      <ul class="hero__facts">
+        <li><strong>From £50</strong><span>Clear, fixed packages</span></li>
+        <li><strong>4K</strong><span>Photography &amp; video</span></li>
+        <li><strong>24–72 hr</strong><span>Delivery turnaround</span></li>
+        <li><strong>360°</strong><span>Photos &amp; virtual tours</span></li>
+      </ul>
+    </div>
+    <button class="video-toggle" type="button" aria-pressed="false" aria-label="Pause background video">
+      <svg class="i i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+      <svg class="i i-play" aria-hidden="true" style="fill:currentColor"><use href="#i-play"/></svg>
+    </button>
+  </section>
 
-
-
-  <!-- Testimonials (scrolling horizontal) https://www.thispersondoesnotexist.com/ -->
-  <section id="testimonials" class="bg-gray-100 py-16 overflow-x-auto whitespace-nowrap" data-aos="fade-right">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
-      <div class="flex gap-6 transition-all ease-in-out duration-300">
-        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="./images/testimonials/test2.jpg" alt="Sarah M" class="mx-auto rounded-full mb-4">
-          <p class="italic break-words">“JT Drones transformed our property listing. The drone shots made all the difference.”</p>
-          <span class="block mt-4 font-semibold">— Sarah M, Estate Agent</span>
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <p class="eyebrow">What we do</p>
+          <h2 id="services-title">Our Services</h2>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <a href="https://hallingardenprojects.com"><img src="./images/testimonials/HallinGardenProjects.jpg" alt="Hallin Garden Projects" class="mx-auto rounded-full mb-4"></a>
-          <p class="italic break-words">“Fast, professional, and the aerial images were incredible. Highly recommend.”</p>
-          <span class="block mt-4 font-semibold">— Brandon H., Landscaper</span>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="./images/testimonials/test4.jpg" alt="Lisa T" class="mx-auto rounded-full mb-4">
-          <p class="italic break-words">“Incredible service and gorgeous photos — will definitely hire again.”</p>
-          <span class="block mt-4 font-semibold">— Lisa T., Landscaper</span>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow min-w-[300px] max-w-sm text-center whitespace-normal">
-          <img src="./images/testimonials/test1.jpg" alt="Derek S" class="mx-auto rounded-full mb-4">
-          <p class="italic break-words">“The drone inspection saved us hours of manual labor. Great tech!”</p>
-          <span class="block mt-4 font-semibold">— Derek S., Facility Manager</span>
-        </div>
+        <p class="lead">From a single roof check to a fully edited promotional film, every job is flown, shot and edited with the same attention to detail.</p>
+      </div>
+      <div class="card-grid card-grid--4">
+        <a class="tile reveal" href="services.html#packages">
+          <img src="images/web/DJI_0089-800.jpg" alt="Aerial photograph of a village, lake and rolling hills" loading="lazy" width="800" height="450">
+          <div class="tile__body"><span class="tile__num">01</span><h3>Aerial Photography</h3><p>Stunning drone photography to showcase landscapes, properties and events from above.</p></div>
+        </a>
+        <a class="tile reveal" href="services.html#roof-inspections">
+          <img src="images/web/DJI_0050-800.jpg" alt="Top-down drone view of a tiled roof and garden" loading="lazy" width="800" height="450">
+          <div class="tile__body"><span class="tile__num">02</span><h3>Roof Inspections</h3><p>Safe, detailed and efficient drone inspections for roofs and high structures.</p></div>
+        </a>
+        <a class="tile reveal" href="services.html#business-promo">
+          <img src="images/web/DJI_0042-800.jpg" alt="Aerial view of a detached house, driveway and garden" loading="lazy" width="800" height="450">
+          <div class="tile__body"><span class="tile__num">03</span><h3>Business Visuals</h3><p>High-quality visuals and video tailored to promote your brand and commercial locations.</p></div>
+        </a>
+        <a class="tile reveal" href="services.html#agricultural-surveys">
+          <img src="images/web/DJI_0040-800.jpg" alt="Aerial view across farmland and countryside" loading="lazy" width="800" height="450">
+          <div class="tile__body"><span class="tile__num">04</span><h3>Land Surveys</h3><p>Detailed aerial data collection and imagery for planning, construction or agriculture.</p></div>
+        </a>
+      </div>
+      <div class="section-foot reveal">
+        <p class="lead" style="margin:0">Packages start at <strong>£50</strong>.</p>
+        <a class="btn" href="services.html">View all services &amp; pricing <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
 
-  <!-- Carousel (with lightbox effect) -->
-  <section id="gallery" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4" data-aos="fade-left">
-      <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
-  
-      <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-        <img src="./images/gallery/DJI_0036.JPG" onclick="openModal(this.src)" alt="Gallery Image 1"
-          class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="./images/gallery/DJI_0040.JPG" onclick="openModal(this.src)" alt="Gallery Image 2"
-          class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="./images/gallery/DJI_0042.JPG" onclick="openModal(this.src)" alt="Gallery Image 3"
-          class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="./images/gallery/DJI_0057.JPG" onclick="openModal(this.src)" alt="Gallery Image 4"
-          class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="./images/gallery/DJI_0063.JPG" onclick="openModal(this.src)" alt="Gallery Image 5"
-          class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
-        <img src="./images/gallery/DJI_0071.JPG" onclick="openModal(this.src)" alt="Gallery Image 6"
-          class="w-full rounded-lg shadow-lg hover:scale-105 hover:brightness-110 transition duration-300 cursor-pointer" />
+  <section class="section on-dark" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <p class="eyebrow">Recent work</p>
+          <h2 id="work-title">The View From Above</h2>
+        </div>
+        <p class="lead">A selection of real photos from recent JT Drones flights: landscapes, homes, gardens and builds.</p>
+      </div>
+      <div class="mosaic reveal">
+        <a href="images/web/DJI_0036-1920.jpg" data-lightbox="home" data-caption="Mountain lake under a big sky">
+          <img src="images/web/DJI_0036-800.jpg" alt="Aerial view over a mountain lake under a cloudy sky" loading="lazy" width="800" height="450"><span class="mosaic__cap">Landscape</span>
+        </a>
+        <a href="images/web/DJI_0057-1920.jpg" data-lightbox="home" data-caption="Completed garden patio and extension">
+          <img src="images/web/DJI_0057-800.jpg" alt="Drone view of a new patio and brick rear extension" loading="lazy" width="800" height="450"><span class="mosaic__cap">Property</span>
+        </a>
+        <a href="images/web/DJI_0063-1920.jpg" data-lightbox="home" data-caption="Top-down view of a sandstone patio">
+          <img src="images/web/DJI_0063-800.jpg" alt="Top-down drone photo of a sandstone patio beside a glazed extension" loading="lazy" width="800" height="450"><span class="mosaic__cap">Top-down</span>
+        </a>
+        <a href="images/web/DJI_0087-1920.jpg" data-lightbox="home" data-caption="Lake and village with hills beyond">
+          <img src="images/web/DJI_0087-800.jpg" alt="Aerial view of a lake beside a village with wooded hills beyond" loading="lazy" width="800" height="450"><span class="mosaic__cap">Landscape</span>
+        </a>
+        <a href="images/web/DJI_0071-1920.jpg" data-lightbox="home" data-caption="Garden groundworks in progress">
+          <img src="images/web/DJI_0071-800.jpg" alt="Overhead view of garden groundworks with a mini digger and materials" loading="lazy" width="800" height="450"><span class="mosaic__cap">Construction</span>
+        </a>
+        <a href="images/web/DJI_0080-1920.jpg" data-lightbox="home" data-caption="Mountain lake and valley">
+          <img src="images/web/DJI_0080-800.jpg" alt="Aerial view of a lake in a mountain valley" loading="lazy" width="800" height="450"><span class="mosaic__cap">Landscape</span>
+        </a>
+      </div>
+      <div class="section-foot reveal">
+        <span></span>
+        <a class="btn btn--light" href="gallery.html">Explore the full gallery <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
-    <div class="text-center mt-10" data-aos="fade-up">
-      <a href="./gallery.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition">
-        View More
-      </a>
-    </div>
-    
-  </section>
-  
-
-  <!-- Modal for gallery image -->
-  <div id="modal" class="modal fixed inset-0 bg-black bg-opacity-75 items-center justify-center z-50">
-    <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</span>
-    <img id="modal-img" class="max-h-[80vh] max-w-[90vw] mx-auto rounded-lg shadow-2xl">
-  </div>
-  
-  <script>
-  // Open the modal and show the clicked image
-  function openModal(src) {
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-img");
-    modalImg.src = src;
-    modal.classList.add("flex");
-    modal.classList.remove("hidden");
-  }
-
-  // Close the modal when clicking outside the image or on the close button
-  function closeModal() {
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-img");
-    modal.classList.remove("flex");
-    modal.classList.add("hidden");
-    modalImg.src = "";
-  }
-
-  // Optional: Close modal on background click (not just the X)
-  document.getElementById("modal").addEventListener("click", function(e) {
-    if (e.target.id === "modal") {
-      closeModal();
-    }
-  });
-</script>
-
-
-  <!-- Contact CTA -->
-  <section id="contact" class="bg-blue-600 py-20 text-white text-center">
-    <h2 class="text-4xl font-bold mb-4">Ready to Elevate Your View?</h2>
-    <p class="text-lg mb-8">Let's chat about your project. Book a free call today.</p>
-    <button onclick="toggleContactModal()" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Book a Call</button>
   </section>
 
-  <!-- Footer -->
-<footer class="bg-gray-800 text-gray-300 py-6 relative">
-  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-    <div class="mb-4 md:mb-0 text-center md:text-left">
-      <p class="mb-1">&copy; 2025 JT Drones. All rights reserved.</p>
-      <a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition">View our Privacy Policy</a>
+  <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Testimonials</p>
+        <h2 id="testimonials-title">What Our Clients Say</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote reveal">
+          <blockquote><p style="margin:0">JT Drones transformed our property listing. The drone shots made all the difference.</p></blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">SM</span><span><span class="quote__name">Sarah M</span><span class="quote__role">Estate Agent</span></span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote><p style="margin:0">Fast, professional, and the aerial images were incredible. Highly recommend.</p></blockquote>
+          <figcaption><span class="avatar"><img src="images/web/hallin-128.jpg" alt="" width="48" height="48" loading="lazy"></span><span><span class="quote__name">Brandon H.</span><span class="quote__role">Landscaper, <a href="https://hallingardenprojects.com" target="_blank" rel="noopener">Hallin Garden Projects</a></span></span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote><p style="margin:0">Incredible service and gorgeous photos — will definitely hire again.</p></blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">LT</span><span><span class="quote__name">Lisa T.</span><span class="quote__role">Landscaper</span></span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote><p style="margin:0">The drone inspection saved us hours of manual labor. Great tech!</p></blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">DS</span><span><span class="quote__name">Derek S.</span><span class="quote__role">Facility Manager</span></span></figcaption>
+        </figure>
+      </div>
     </div>
+  </section>
 
-    <!-- Socials Bottom-Left on Desktop -->
-    <div class="absolute bottom-4 left-4 md:static flex gap-4 text-xl text-white">
-      <a href="https://www.instagram.com/jtdrones" target="_blank" aria-label="Instagram" class="hover:text-pink-400 transition">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61576260053191" target="_blank" aria-label="Facebook" class="hover:text-blue-500 transition">
-        <i class="fab fa-facebook"></i>
-      </a>
+  <section class="section cta" aria-labelledby="cta-title">
+    <img class="cta__bg" src="images/web/DJI_0069-1920.jpg" alt="" loading="lazy" width="1920" height="1080">
+    <div class="container reveal">
+      <p class="eyebrow">Let’s talk</p>
+      <h2 id="cta-title">Ready to Elevate Your View?</h2>
+      <p class="lead">Let’s chat about your project. Book a free call today.</p>
+      <div class="hero__actions">
+        <a class="btn btn--light" href="contactus.html#book" data-book>Book a Call <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="services.html">See packages</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- partial:footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand-white.png" alt="JT Drones" width="160" height="112" loading="lazy">
+        <p>Aerial photography, drone video, roof inspections and 360° tours, delivered fast and finished to a high standard.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/jtdrones" target="_blank" rel="noopener" aria-label="JT Drones on Instagram"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61576260053191" target="_blank" rel="noopener" aria-label="JT Drones on Facebook"><svg class="i" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services &amp; pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <ul>
+          <li><a href="contactus.html#book" data-book>Book a call</a></li>
+          <li><a href="mailto:jackthomas11400@gmail.com">jackthomas11400@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> JT Drones. All rights reserved.</p>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <button class="linklike" type="button" data-cookie-settings>Cookie settings</button>
+      </nav>
     </div>
   </div>
 </footer>
 
-<!-- COOKIE CONSENT BANNER -->
-  <div id="cookie-banner" class="hidden fixed inset-x-0 bottom-0 w-full bg-gray-900 text-white p-0 z-50 shadow-2xl">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-sm text-center md:text-left">We use cookies to enhance your browsing experience. By clicking &ldquo;Accept&rdquo; you agree to the storing of analytics cookies on your device. <a href="privacy.html" class="underline">Learn more</a>.</p>
-      <div class="flex gap-2 flex-shrink-0 self-center md:self-auto">
-        <button id="accept-cookies" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm font-semibold">Accept</button>
-        <button id="decline-cookies" class="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded text-sm font-semibold">Decline</button>
-      </div>
+<dialog class="modal" id="book-dialog" aria-labelledby="book-title">
+  <div class="modal__head">
+    <div>
+      <h2 id="book-title">Book a Call</h2>
+      <p>Tell us about the job and we’ll get back to you to arrange a call.</p>
     </div>
+    <button class="icon-btn" type="button" data-close aria-label="Close booking form"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
   </div>
+  <div class="modal__body">
+    <form class="form" action="https://formsubmit.co/jackthomas11400@gmail.com" method="POST" enctype="multipart/form-data" data-validate novalidate>
+      <input type="hidden" name="_subject" value="New booking request — jt-drones.co.uk">
+      <input type="hidden" name="_next" value="https://jt-drones.co.uk/thanks.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="form" value="Book a Call">
+      <input type="hidden" name="service" value="" data-service-field>
+      <div class="hp" aria-hidden="true"><label>Leave blank <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+      <div class="form-alert form-alert--error" role="alert" hidden data-form-alert></div>
+      <div class="form__row form__row--2">
+        <div class="field">
+          <label for="b-name">Full name<span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="b-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="b-name-err">
+          <p class="field__error" id="b-name-err"></p>
+        </div>
+        <div class="field">
+          <label for="b-email">Email<span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="b-email" name="email" type="email" autocomplete="email" required maxlength="150" aria-describedby="b-email-err">
+          <p class="field__error" id="b-email-err"></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="b-phone">Phone number<span class="req" aria-hidden="true">*</span></label>
+        <input class="input" id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" data-phone aria-describedby="b-phone-err">
+        <p class="field__error" id="b-phone-err"></p>
+      </div>
+      <div class="field">
+        <label for="b-desc">Description of the job<span class="req" aria-hidden="true">*</span></label>
+        <textarea class="input" id="b-desc" name="description" required minlength="10" maxlength="3000" aria-describedby="b-desc-hint b-desc-err"></textarea>
+        <p class="field__hint" id="b-desc-hint">Location, type of shoot or inspection, and any dates you have in mind.</p>
+        <p class="field__error" id="b-desc-err"></p>
+      </div>
+      <div class="field">
+        <span class="label" id="b-file-label">Example image <span class="optional">(optional, JPEG or PNG, max 5 MB)</span></span>
+        <div class="upload" data-upload>
+          <input id="b-file" name="attachment" type="file" accept="image/jpeg,image/png" aria-labelledby="b-file-label" aria-describedby="b-file-err">
+          <div class="upload__zone"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg><span><strong>Choose an image</strong> or drag it here</span></div>
+        </div>
+        <div class="upload__preview" data-upload-preview>
+          <img alt="" data-upload-thumb>
+          <div class="upload__meta"><strong data-upload-name></strong><span data-upload-size></span></div>
+          <button class="upload__remove" type="button" data-upload-remove>Remove</button>
+        </div>
+        <p class="field__error" id="b-file-err"></p>
+      </div>
+      <button class="btn btn--block" type="submit">Submit request <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <p class="form-legal">Your details are sent securely by email via FormSubmit and used only to reply to your enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</dialog>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <!-- Modal Script -->
-  <script>
-    AOS.init({ duration: 800, delay:150, once: false });
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <div class="lightbox__bar">
+    <span data-lb-count aria-live="polite"></span>
+    <button class="icon-btn" type="button" data-close aria-label="Close image viewer"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="lightbox__stage">
+    <button class="icon-btn lightbox__prev" type="button" data-lb-prev aria-label="Previous image"><svg class="i" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+    <img alt="" data-lb-img>
+    <button class="icon-btn lightbox__next" type="button" data-lb-next aria-label="Next image"><svg class="i" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+  </div>
+  <p class="lightbox__caption" data-lb-caption></p>
+</dialog>
 
-    function toggleContactModal() {
-      const modal = document.getElementById('contactModal');
-      modal.classList.toggle('hidden');
-      modal.classList.toggle('open');
-    }
+<div class="cookie" id="cookie-banner" role="region" aria-labelledby="cookie-title" hidden>
+  <h2 id="cookie-title">Cookies</h2>
+  <p>We’d like to use optional Google Analytics cookies to understand how visitors use this site. They’re only set if you accept. <a href="privacy.html">Learn more</a>.</p>
+  <div class="cookie__actions">
+    <button class="btn btn--sm" type="button" data-cookie="accept">Accept analytics</button>
+    <button class="btn btn--sm btn--ghost" type="button" data-cookie="decline">Decline</button>
+  </div>
+</div>
 
-    function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("hidden");
-  }
-
-  // Smooth scrolling behavior
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth"
-      });
-
-      // Close mobile menu on click
-      const menu = document.getElementById("mobileMenu");
-      if (!menu.classList.contains("hidden")) {
-        menu.classList.add("hidden");
-      }
-    });
-  });
-
-  const navbar = document.getElementById("navbar");
-
-  function handleNavbarScroll() {
-    if (window.scrollY > 50) {
-      navbar.classList.remove("bg-transparent");
-      navbar.classList.add("bg-white", "shadow-md");
-    } else {
-      navbar.classList.remove("bg-white", "shadow-md");
-      navbar.classList.add("bg-transparent");
-    }
-  }
-
-  window.addEventListener("scroll", handleNavbarScroll);
-  document.addEventListener("DOMContentLoaded", handleNavbarScroll);
-
-  /* --------------------------------------------------
-       Cookie helpers
-    --------------------------------------------------*/
-    function setCookie(name, value, days) {
-      const d = new Date();
-      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-      const expires = "expires=" + d.toUTCString();
-      document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
-    }
-
-    function getCookie(name) {
-      const cname = name + "=";
-      const decodedCookie = decodeURIComponent(document.cookie);
-      const ca = decodedCookie.split(';');
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1);
-        if (c.indexOf(cname) === 0) {
-          return c.substring(cname.length, c.length);
-        }
-      }
-      return "";
-    }
-
-    function enableAnalytics() {
-      // Tell GA that consent has been granted
-      if (typeof gtag === 'function') {
-        gtag('consent', 'update', { 'analytics_storage': 'granted' });
-      }
-    }
-
-    /* --------------------------------------------------
-       Initialise cookie banner
-    --------------------------------------------------*/
-    document.addEventListener('DOMContentLoaded', () => {
-      const banner = document.getElementById('cookie-banner');
-      const consent = getCookie('cookie_consent');
-      if (!consent) {
-        banner.classList.remove('hidden');
-      } else if (consent === 'true') {
-        enableAnalytics();
-      }
-
-      document.getElementById('accept-cookies').addEventListener('click', () => {
-        setCookie('cookie_consent', 'true', 180);
-        enableAnalytics();
-        banner.classList.add('hidden');
-      });
-
-      document.getElementById('decline-cookies').addEventListener('click', () => {
-        setCookie('cookie_consent', 'false', 180);
-        banner.classList.add('hidden');
-      });
-    });
-    
-  </script>
-  
+<script src="js/validate.js"></script>
+<script src="js/site.js"></script>
+<!-- /partial -->
 </body>
 </html>

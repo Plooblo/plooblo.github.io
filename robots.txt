@@ -1,8 +1,6 @@
-# Allow all crawlers access to everything
 User-agent: *
 Disallow: /privacy.html
-Disallow: /admin/
+Disallow: /thanks.html
 Allow: /
 
-# Sitemap
 Sitemap: https://jt-drones.co.uk/sitemap.xml

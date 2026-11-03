@@ -1,0 +1,121 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand-white.png" alt="JT Drones" width="160" height="112" loading="lazy">
+        <p>Aerial photography, drone video, roof inspections and 360° tours, delivered fast and finished to a high standard.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/jtdrones" target="_blank" rel="noopener" aria-label="JT Drones on Instagram"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61576260053191" target="_blank" rel="noopener" aria-label="JT Drones on Facebook"><svg class="i" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services &amp; pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <ul>
+          <li><a href="contactus.html#book" data-book>Book a call</a></li>
+          <li><a href="mailto:jackthomas11400@gmail.com">jackthomas11400@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> JT Drones. All rights reserved.</p>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <button class="linklike" type="button" data-cookie-settings>Cookie settings</button>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<dialog class="modal" id="book-dialog" aria-labelledby="book-title">
+  <div class="modal__head">
+    <div>
+      <h2 id="book-title">Book a Call</h2>
+      <p>Tell us about the job and we’ll get back to you to arrange a call.</p>
+    </div>
+    <button class="icon-btn" type="button" data-close aria-label="Close booking form"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="modal__body">
+    <form class="form" action="https://formsubmit.co/jackthomas11400@gmail.com" method="POST" enctype="multipart/form-data" data-validate novalidate>
+      <input type="hidden" name="_subject" value="New booking request — jt-drones.co.uk">
+      <input type="hidden" name="_next" value="https://jt-drones.co.uk/thanks.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="form" value="Book a Call">
+      <input type="hidden" name="service" value="" data-service-field>
+      <div class="hp" aria-hidden="true"><label>Leave blank <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+      <div class="form-alert form-alert--error" role="alert" hidden data-form-alert></div>
+      <div class="form__row form__row--2">
+        <div class="field">
+          <label for="b-name">Full name<span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="b-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="b-name-err">
+          <p class="field__error" id="b-name-err"></p>
+        </div>
+        <div class="field">
+          <label for="b-email">Email<span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="b-email" name="email" type="email" autocomplete="email" required maxlength="150" aria-describedby="b-email-err">
+          <p class="field__error" id="b-email-err"></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="b-phone">Phone number<span class="req" aria-hidden="true">*</span></label>
+        <input class="input" id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" data-phone aria-describedby="b-phone-err">
+        <p class="field__error" id="b-phone-err"></p>
+      </div>
+      <div class="field">
+        <label for="b-desc">Description of the job<span class="req" aria-hidden="true">*</span></label>
+        <textarea class="input" id="b-desc" name="description" required minlength="10" maxlength="3000" aria-describedby="b-desc-hint b-desc-err"></textarea>
+        <p class="field__hint" id="b-desc-hint">Location, type of shoot or inspection, and any dates you have in mind.</p>
+        <p class="field__error" id="b-desc-err"></p>
+      </div>
+      <div class="field">
+        <span class="label" id="b-file-label">Example image <span class="optional">(optional, JPEG or PNG, max 5 MB)</span></span>
+        <div class="upload" data-upload>
+          <input id="b-file" name="attachment" type="file" accept="image/jpeg,image/png" aria-labelledby="b-file-label" aria-describedby="b-file-err">
+          <div class="upload__zone"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg><span><strong>Choose an image</strong> or drag it here</span></div>
+        </div>
+        <div class="upload__preview" data-upload-preview>
+          <img alt="" data-upload-thumb>
+          <div class="upload__meta"><strong data-upload-name></strong><span data-upload-size></span></div>
+          <button class="upload__remove" type="button" data-upload-remove>Remove</button>
+        </div>
+        <p class="field__error" id="b-file-err"></p>
+      </div>
+      <button class="btn btn--block" type="submit">Submit request <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <p class="form-legal">Your details are sent securely by email via FormSubmit and used only to reply to your enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</dialog>
+
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <div class="lightbox__bar">
+    <span data-lb-count aria-live="polite"></span>
+    <button class="icon-btn" type="button" data-close aria-label="Close image viewer"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="lightbox__stage">
+    <button class="icon-btn lightbox__prev" type="button" data-lb-prev aria-label="Previous image"><svg class="i" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+    <img alt="" data-lb-img>
+    <button class="icon-btn lightbox__next" type="button" data-lb-next aria-label="Next image"><svg class="i" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+  </div>
+  <p class="lightbox__caption" data-lb-caption></p>
+</dialog>
+
+<div class="cookie" id="cookie-banner" role="region" aria-labelledby="cookie-title" hidden>
+  <h2 id="cookie-title">Cookies</h2>
+  <p>We’d like to use optional Google Analytics cookies to understand how visitors use this site. They’re only set if you accept. <a href="privacy.html">Learn more</a>.</p>
+  <div class="cookie__actions">
+    <button class="btn btn--sm" type="button" data-cookie="accept">Accept analytics</button>
+    <button class="btn btn--sm btn--ghost" type="button" data-cookie="decline">Decline</button>
+  </div>
+</div>
+
+<script src="js/validate.js"></script>
+<script src="js/site.js"></script>
